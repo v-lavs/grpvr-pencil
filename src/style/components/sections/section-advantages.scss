@@ -1,0 +1,62 @@
+.section-advantages {
+  .section__header{
+    margin-bottom: 60px;
+  }
+  .advantages-list {
+    &__item {
+      position: relative;
+      max-width: 250px;
+      padding-top: 50px;
+      line-height: 1.1;
+      &:before {
+        position: absolute;
+        content: '';
+        //background-image: linear-gradient(to right, #ffaa00, #ff4500);
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+      }
+      &:first-child:before{
+        background-image: url(../assets/img/krug2.png);
+      }
+      &:nth-child(2):before{
+          background-image: url(../assets/img/krug1.png);
+        }
+      &:nth-child(3):before{
+        background-image: url(../assets/img/krug3.png);
+      }
+      &:nth-child(4):before{
+        background-image: url(../assets/img/krug4.png);
+      }
+      &:nth-child(5):before{
+        background-image: url(../assets/img/krug5.png);
+      }
+    }
+
+    &__text {
+      position: relative;
+      background-image: linear-gradient(115deg, #fefefe, #eaecf4);
+      border-radius: 15px;
+      padding: 48px 30px 22px;
+      background-clip: padding-box;
+      border: 3px solid transparent;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        margin: -3px;
+        border-radius: inherit;
+        background-image: linear-gradient(-182deg, #fefefe, #eaecf4);
+      }
+    }
+  }
+}

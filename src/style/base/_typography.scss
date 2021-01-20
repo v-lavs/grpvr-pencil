@@ -1,0 +1,28 @@
+/**
+*TEXT UTILITIES
+*/
+
+.text {
+  &_small{
+    font-size: 18px;
+  }
+
+  &_md{
+font-size: 24px;
+  }
+  &_middle{
+    font-size: 29px;
+  }
+
+  &_large {
+
+  }
+}
+
+.heading{
+  &_lg {
+    font-size: 49px;
+  }
+}
+
+

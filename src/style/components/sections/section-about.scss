@@ -1,0 +1,45 @@
+.section-about {
+  .section {
+    &__header {
+      &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 2px;
+        background-color: #fc6f16;
+        opacity: 0.3;
+        width: 60vw;
+        bottom: -12px;
+        z-index: 1;
+      }
+    }
+
+    &__content {
+      padding-top: 77px;
+      padding-right: 20px;
+      width: 52%;
+    }
+
+    &__text {
+      width: 100%;
+    }
+
+    &__thumb {
+      width: 48%;
+    }
+  }
+  .wrap-img {
+    position: relative;
+    width: 48vw;
+    padding-left: 14%;
+    z-index: 1;
+  }
+  .text_primary-color {
+    color: #fc6314;
+  }
+
+  .bg_primary {
+    max-width: 657px;
+
+  }
+}

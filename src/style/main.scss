@@ -1,0 +1,28 @@
+@import 'utils/variables';
+@import 'utils/mixins';
+
+
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/base';
+@import 'components/grid';
+
+@import 'components/nav';
+@import 'components/button';
+@import 'components/slider';
+@import 'components/sections/section-banner';
+@import 'components/sections/section-about';
+@import 'components/sections/section-manifestations';
+@import 'components/sections/section-reasons';
+@import 'components/sections/section-stages';
+@import 'components/sections/section-prevention';
+@import 'components/sections/section-use';
+@import 'components/sections/section-advantages';
+@import 'components/sections/section-location';
+@import 'components/sections/section-video';
+
+@import 'components/header';
+@import 'components/footer';
+
+
+
