@@ -26,6 +26,26 @@ body {
      font-size: 0.615em;
   }
 }
+
+.main__bg{
+  background-image: linear-gradient(to bottom, rgba(221,230,235,0) 20%, rgba(221,230,235,1),rgba(221,230,235,0));
+  position: relative;
+  &:before{
+    position: absolute;
+    content: '';
+    display: block;
+    background-image: url(../assets/img/decor-preventions.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    width: 547px;
+    height: 547px;
+    left: -5%;
+    top: 0;
+    z-index: 1;
+  }
+}
+
 .dynamic-content {
   //ul {
   //  font-size: 1rem;

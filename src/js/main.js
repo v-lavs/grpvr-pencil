@@ -51,94 +51,97 @@ $(document).ready(function () {
 
     // slider
 
+    var navSlider;
+    var aboutGerpevirSlider;
     var advantagesSlider;
-    var gymnasticSlider;
-    var questionsSlider;
+
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+
+        slidesPerView: 1,
+        freeMode: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+    });
+    var galleryTop = new Swiper('.gallery-top', {
+
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        thumbs: {
+            swiper: galleryThumbs
+        }
+    });
+
+    var btnSlider = new Swiper('#btnSlider', {
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
 
     function slidersInit() {
         if ($(window).width() <= 1040) {
+            if (!navSlider) {
+                navSlider = new Swiper('#navSlider', {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                });
+            }
+            if (!aboutGerpevirSlider) {
+                aboutGerpevirSlider = new Swiper('#aboutGerpevirSlider', {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                    breakpoints: {
+
+                        540: {
+                            slidesPerView: 2,
+                        },
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                });
+            }
+
             if (!advantagesSlider) {
                 advantagesSlider = new Swiper('#advantagesSlider', {
                     slidesPerView: 2,
-                    spaceBetween: 40,
                     breakpoints: {
 
-                        768: {
-                            slidesPerView: 2,
+                        540: {
+                            slidesPerView: 1,
                         },
-                        200: {
-                            slidesPerView: 1
-                        }
                     },
                     pagination: {
                         el: '.swiper-pagination',
                         clickable: true,
                     },
-                    navigation: {
-                        nextEl: '.bg-slider-advantages .swiper-button-next',
-                        prevEl: '.bg-slider-advantages .swiper-button-prev',
-                    },
-                });
-            }
-            if (!gymnasticSlider) {
-                gymnasticSlider = new Swiper('#gymnasticSlider', {
-                    slidesPerView: 1,
-                    spaceBetween: 10,
-                    breakpoints: {
-                        768: {
-                            slidesPerView: 2,
-                        },
-                    },
-                    navigation: {
-                        nextEl: '.navigation-gymnastic-list .swiper-button-next',
-                        prevEl: '.navigation-gymnastic-list .swiper-button-prev',
-                    },
-                });
-            }
-            if (!questionsSlider) {
-                questionsSlider = new Swiper('#questionsSlider', {
-                    slidesPerView: 1,
-                    breakpoints: {
-                        768: {
-                            slidesPerView: 2,
-                        },
-                    },
-                    navigation: {
-                        nextEl: '.question-list-wrap .swiper-button-next',
-                        prevEl: '.question-list-wrap .swiper-button-prev',
-                    },
                 });
             }
         } else {
+            if (navSlider) {
+                navSlider.destroy(true, true);
+                navSlider = null;
+            }
+            if (aboutGerpevirSlider) {
+                aboutGerpevirSlider.destroy(true, true);
+                aboutGerpevirSlider = null;
+            }
+
             if (advantagesSlider) {
                 advantagesSlider.destroy(true, true);
                 advantagesSlider = null;
-            }
-            if (gymnasticSlider) {
-                gymnasticSlider.destroy(true, true);
-                gymnasticSlider = null;
-            }
-            if (questionsSlider) {
-                questionsSlider.destroy(true, true);
-                questionsSlider = null;
             }
         }
     }
 
     slidersInit();
-
-    function setEqualHeight() {
-        var max_card_height = 0;
-        var $advantagesCards = $('.question-list__item');
-        $advantagesCards.each(function () {
-            if ($(this).height() > max_card_height) {
-                max_card_height = $(this).height();
-            }
-        });
-        $advantagesCards.css({minHeight: $(window).width() > 1040 ? max_card_height : 'auto'});
-    }
-
-    setEqualHeight();
 
 //SUB-MENU
 
@@ -153,6 +156,22 @@ $(document).ready(function () {
         $(this).hide();
     });
 
+    // PARALAX
+    $('.mouse-parallax').on('mousemove', (e) => {
+        const x = e.clientX / $(window).width();
+        const y = e.clientY / $(window).height();
+        const $activeSection = $(e.currentTarget);
+        console.log($activeSection);
+        $activeSection.find('.mouse-parallax__bg').css(
+            'transform',
+            'translate(-' + x * 50 + 'px, -' + y * 40 + 'px)'
+        );
+        $activeSection.find('.mouse-parallax__bg-2').css(
+            'transform',
+            'translate(-' + x * 40 + 'px, +' + y * 50 + 'px)'
+        );
+
+    });
 
     $(window).on('resize', function () {
         slidersInit();

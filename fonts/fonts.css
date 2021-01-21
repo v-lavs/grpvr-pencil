@@ -18,3 +18,12 @@
 }
 
 
+@font-face {
+	font-family: 'Harabara Mais';
+	src: url('HarabaraMaisBold-HarabaraMaisBold.eot');
+	src: url('HarabaraMaisBold-HarabaraMaisBold.eot?#iefix') format('embedded-opentype'),
+	url('HarabaraMaisBold-HarabaraMaisBold.woff') format('woff'),
+	url('HarabaraMaisBold-HarabaraMaisBold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
