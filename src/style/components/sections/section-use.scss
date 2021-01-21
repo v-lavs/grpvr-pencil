@@ -1,13 +1,45 @@
 .section-use {
+  padding-bottom: 75px;
+
   .section__header {
     max-width: 450px;
     margin: 0 auto 45px;
   }
 
   .section__content {
+    position: relative;
     counter-reset: card;
     padding: 15px 0 28px;
     background-image: linear-gradient(to right, #fea00b, #fb5406);
+
+    &:before {
+      position: absolute;
+      content: '';
+      background-image: url(../assets/img/lips.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: auto;
+      width: 365px;
+      height: 140px;
+      right: 15%;
+      bottom: -26px;
+      z-index: 1;
+    }
+  }
+
+  .section__thumb {
+    position: absolute;
+    width: 549px;
+    height: 567px;
+    background-position: bottom, center, 0 0;
+    background-repeat: no-repeat;
+    background-size: auto;
+    border-radius: 50%;
+    z-index: 2;
+    overflow: hidden;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -5.5%;
   }
 
   .usage-step {
@@ -89,8 +121,8 @@
 
   .swiper-container {
     padding-top: 30px;
-    padding-bottom: 100px;
-    position: relative;
+    padding-bottom: 96px;
+    padding-left: 0;
   }
 
   .text-signs {
@@ -102,7 +134,8 @@
     font-weight: 500;
     color: #ffffff;
   }
-  .decor-thumb{
+
+  .decor-thumb {
     position: absolute;
     width: 52px;
     height: 48px;
@@ -110,7 +143,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto;
-    bottom: -100px;
+    bottom: -96px;
     left: 50%;
     transform: translateX(-50%);
   }

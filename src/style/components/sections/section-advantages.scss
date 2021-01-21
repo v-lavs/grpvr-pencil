@@ -1,17 +1,18 @@
 .section-advantages {
-  .section__header{
-    margin-bottom: 60px;
-  }
+  padding-top: 8.5%;
+  padding-bottom: 105px;
   .advantages-list {
+    flex-wrap: wrap;
     &__item {
       position: relative;
-      max-width: 250px;
+      max-width: 255px;
       padding-top: 50px;
       line-height: 1.1;
+      margin-right: 63px;
+      margin-bottom: 17px;
       &:before {
         position: absolute;
         content: '';
-        //background-image: linear-gradient(to right, #ffaa00, #ff4500);
         width: 72px;
         height: 72px;
         border-radius: 50%;
@@ -20,6 +21,7 @@
         transform: translateX(-50%);
         z-index: 1;
       }
+
       &:first-child:before{
         background-image: url(../assets/img/krug2.png);
       }
@@ -39,12 +41,12 @@
 
     &__text {
       position: relative;
-      background-image: linear-gradient(115deg, #fefefe, #eaecf4);
+      background-image: linear-gradient(to right, #fefefe, #eaecf4);
       border-radius: 15px;
       padding: 48px 30px 22px;
       background-clip: padding-box;
       border: 3px solid transparent;
-
+      min-height: 212px;
       &:before {
         content: '';
         position: absolute;
@@ -55,8 +57,32 @@
         z-index: -1;
         margin: -3px;
         border-radius: inherit;
-        background-image: linear-gradient(-182deg, #fefefe, #eaecf4);
+        background-image: linear-gradient(45deg, #e9ecf5, #fefefe, #ffffff);
       }
+    }
+  }
+
+  .section{
+    &__header{
+      margin-bottom: 60px;
+    }
+    &__thumb{
+      width: 42%;
+      padding-top: 14px;
+      padding-right: 5.5%;
+      display: flex;
+      align-items: start;
+    }
+    &__content{
+      width: 58%;
+      padding-left: 28px;
+    }
+    &__sub-title{
+      max-width: 533px;
+      opacity: .75;
+      color: #000000;
+      font-size: 16px;
+      font-weight: 500;
     }
   }
 }

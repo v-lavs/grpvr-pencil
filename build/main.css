@@ -117,6 +117,8 @@ body {
 
 .wrapper {
   overflow: hidden;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 .img {
@@ -139,7 +141,7 @@ body {
 }
 
 .main__bg {
-  background-image: linear-gradient(to bottom, rgba(221, 230, 235, 0) 20%, #dde6eb, rgba(221, 230, 235, 0));
+  background-image: linear-gradient(to bottom, rgba(221, 230, 235, 0), #dde6eb, rgba(221, 230, 235, 0));
   position: relative;
 }
 
@@ -1110,15 +1112,49 @@ body {
   height: 100%;
 }
 
+.section-use {
+  padding-bottom: 75px;
+}
+
 .section-use .section__header {
   max-width: 450px;
   margin: 0 auto 45px;
 }
 
 .section-use .section__content {
+  position: relative;
   counter-reset: card;
   padding: 15px 0 28px;
   background-image: linear-gradient(to right, #fea00b, #fb5406);
+}
+
+.section-use .section__content:before {
+  position: absolute;
+  content: '';
+  background-image: url(../assets/img/lips.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  width: 365px;
+  height: 140px;
+  right: 15%;
+  bottom: -26px;
+  z-index: 1;
+}
+
+.section-use .section__thumb {
+  position: absolute;
+  width: 549px;
+  height: 567px;
+  background-position: bottom, center, 0 0;
+  background-repeat: no-repeat;
+  background-size: auto;
+  border-radius: 50%;
+  z-index: 2;
+  overflow: hidden;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -5.5%;
 }
 
 .section-use .usage-step {
@@ -1197,8 +1233,8 @@ body {
 
 .section-use .swiper-container {
   padding-top: 30px;
-  padding-bottom: 100px;
-  position: relative;
+  padding-bottom: 96px;
+  padding-left: 0;
 }
 
 .section-use .text-signs {
@@ -1219,20 +1255,27 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
-  bottom: -100px;
+  bottom: -96px;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.section-advantages .section__header {
-  margin-bottom: 60px;
+.section-advantages {
+  padding-top: 8.5%;
+  padding-bottom: 105px;
+}
+
+.section-advantages .advantages-list {
+  flex-wrap: wrap;
 }
 
 .section-advantages .advantages-list__item {
   position: relative;
-  max-width: 250px;
+  max-width: 255px;
   padding-top: 50px;
   line-height: 1.1;
+  margin-right: 63px;
+  margin-bottom: 17px;
 }
 
 .section-advantages .advantages-list__item:before {
@@ -1269,11 +1312,12 @@ body {
 
 .section-advantages .advantages-list__text {
   position: relative;
-  background-image: linear-gradient(115deg, #fefefe, #eaecf4);
+  background-image: linear-gradient(to right, #fefefe, #eaecf4);
   border-radius: 15px;
   padding: 48px 30px 22px;
   background-clip: padding-box;
   border: 3px solid transparent;
+  min-height: 212px;
 }
 
 .section-advantages .advantages-list__text:before {
@@ -1286,7 +1330,32 @@ body {
   z-index: -1;
   margin: -3px;
   border-radius: inherit;
-  background-image: linear-gradient(-182deg, #fefefe, #eaecf4);
+  background-image: linear-gradient(45deg, #e9ecf5, #fefefe, #ffffff);
+}
+
+.section-advantages .section__header {
+  margin-bottom: 60px;
+}
+
+.section-advantages .section__thumb {
+  width: 42%;
+  padding-top: 14px;
+  padding-right: 5.5%;
+  display: flex;
+  align-items: start;
+}
+
+.section-advantages .section__content {
+  width: 58%;
+  padding-left: 28px;
+}
+
+.section-advantages .section__sub-title {
+  max-width: 533px;
+  opacity: .75;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .section-location .block-btn {

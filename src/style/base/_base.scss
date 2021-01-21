@@ -8,6 +8,8 @@ body {
 
 .wrapper {
   overflow: hidden;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 .img {
@@ -28,7 +30,7 @@ body {
 }
 
 .main__bg{
-  background-image: linear-gradient(to bottom, rgba(221,230,235,0) 20%, rgba(221,230,235,1),rgba(221,230,235,0));
+  background-image: linear-gradient(to bottom, rgba(221,230,235,0), rgba(221,230,235,1),rgba(221,230,235,0));
   position: relative;
   &:before{
     position: absolute;
