@@ -1,10 +1,185 @@
-.section-stages{
+.section-stages {
   padding-top: 8.5%;
   padding-bottom: 93px;
-  .section{
-    &__header{
-      margin: 0 auto;
-      max-width: 33%;
+  color: #fff;
+
+  .desktop-hidden {
+    display: none !important;
+  }
+
+  .section__header {
+    margin: 0 auto;
+    max-width: 33%;
+  }
+
+  .anim-in {
+    transform: translateX(0);
+  }
+
+  .anim-out {
+    transform: translateX(50vw);
+  }
+
+  .slider-stages {
+    background: url("../assets/img/bg-gradient-stages.svg") no-repeat;
+    background-size: cover;
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+  }
+
+  .slider-stage__pagination {
+    position: relative;
+    display: flex;
+    width: 100%;
+    font-size: 15px;
+    line-height: 1.6;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #000;
+    text-align: center;
+    background-color: #fff;
+  }
+
+  .slider-stage__progress {
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 3px solid #fc9e18;
+
+    &-track {
+      background: linear-gradient(90deg, rgba(252, 160, 0, 1) 0%, rgba(246, 97, 9, 1) 100%);
+      height: 12px;
+      width: 24%;
+      transition: .45s;
+    }
+  }
+
+  .slider-stage__handle {
+    position: absolute;
+    top: 50%;
+    left: 24%;
+    transform: translate(-50%, -50%);
+    width: 90px;
+    height: 25px;
+    border-radius: 13px;
+    background-color: #fefefe;
+    border: 1px solid #ddd;
+    transition: .45s;
+    z-index: 4;
+  }
+
+  .slider-stage__pagination-item {
+    position: relative;
+    z-index: 2;
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    min-height: 140px;
+
+    &.active {
+      color: #ff6c00;
+      font-weight: 500;
+      font-size: 31px;
+      line-height: 1;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      width: 2px;
+      height: 52px;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      background-color: #999;
+      opacity: .2;
+      transform: translateY(-50%);
+      text-align: center;
+      z-index: 1;
+    }
+
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  .slider-stages__part {
+    width: 50%;
+    flex-grow: 1;
+  }
+
+  .slider-stages__content {
+    padding: 60px 30px 70px;
+  }
+
+  .slider-content__text-wrap {
+    position: relative;
+    transition: transform .5s;
+    min-height: 615px;
+    padding: 2.75em;
+    font-size: 22px;
+    line-height: 1.1;
+    box-shadow: 0 0 54px rgba(252, 99, 20, 0.44);
+    border-radius: 1em;
+  }
+
+  .slider-content__title {
+    font-size: 32px;
+    font-weight: 700;
+    font-family: $secondary-font;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+
+    .icon {
+      display: block;
+      width: 125px;
+      height: 125px;
+      margin-bottom: 33px;
+    }
+  }
+
+  .slider-content__text {
+    max-width: 460px;
+  }
+
+  .image-slider {
+    background: url("../assets/img/circles.jpg") center no-repeat;
+    background-size: contain;
+    &__circle {
+      position: relative;
+      display: block;
+      width: 100%;
+      padding-top: 65.5%;
+      max-width: 580px;
+      margin: auto;
+
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: block;
+        width: 77%;
+        height: auto;
+        transform: translate(-50%, -50%) scale(.4);
+        opacity: 0;
+        transition: .3s ;
+        z-index: 1;
+      }
+    }
+    .swiper-slide-active {
+      .image-slider__img {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+      }
     }
   }
 }

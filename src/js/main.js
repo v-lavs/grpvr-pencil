@@ -3,7 +3,6 @@
  * */
 
 
-
 /**
  * CUSTOM SCRIPTS
  **/
@@ -48,29 +47,49 @@ $(document).ready(function () {
     });
 
 
-
     // slider
 
     var navSlider;
     var aboutGerpevirSlider;
     var advantagesSlider;
 
-    var galleryThumbs = new Swiper('.gallery-thumbs', {
+    const stageSliderSpeed = 500;
 
-        slidesPerView: 1,
-        freeMode: true,
-        watchSlidesVisibility: true,
-        watchSlidesProgress: true,
-    });
-    var galleryTop = new Swiper('.gallery-top', {
-
+    const stagesSlider = new Swiper('#stagesSlider', {
+        speed: stageSliderSpeed,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
-        },
-        thumbs: {
-            swiper: galleryThumbs
         }
+    });
+
+    const stageSliderContent = $('#stagesSlideContent');
+
+    stagesSlider.on('slideChange', function () {
+        const content = $(this.slides[this.realIndex]).find('.slider-content__text-wrap').html();
+        const contentWrapEL = stageSliderContent.find('.slider-content__text-wrap');
+
+        contentWrapEL.removeClass('anim-in');
+        contentWrapEL.addClass('anim-out');
+
+        setTimeout(() => {
+            contentWrapEL.html(content);
+            contentWrapEL.addClass('anim-in');
+            contentWrapEL.removeClass('anim-out');
+        }, stageSliderSpeed);
+
+        const dotWidth = 100 / this.slides.length;
+        const handlePosition = dotWidth * (this.realIndex) + dotWidth / 2 + '%';
+        $('.slider-stage__progress-track').css({width: handlePosition});
+        $('.slider-stage__handle').css({left: handlePosition});
+
+        $('.slider-stage__pagination-item').removeClass('active');
+        $('.slider-stage__pagination-item').eq(this.realIndex).addClass('active');
+    });
+
+    $('.slider-stage__pagination-link').click(function (e) {
+        e.preventDefault();
+        stagesSlider.slideTo($(this).parent().index())
     });
 
     var btnSlider = new Swiper('#btnSlider', {
@@ -150,7 +169,7 @@ $(document).ready(function () {
     });
 
 //HIDE TEXT
-    $('.text-hide .read-more').on('click', function(e) {
+    $('.text-hide .read-more').on('click', function (e) {
         e.preventDefault();
         $(this).siblings().removeClass('hide');
         $(this).hide();
