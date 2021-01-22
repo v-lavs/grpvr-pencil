@@ -29,11 +29,15 @@
 
   .section__thumb {
     position: absolute;
-    width: 549px;
-    height: 567px;
+    //width: 549px;
+    //height: 567px;
+    max-width: 28.5vw;
+    width: 30%;
+    height: 28.5vw;
     background-position: bottom, center, 0 0;
     background-repeat: no-repeat;
-    background-size: auto;
+    //background-size: auto;
+    background-size: 65%, contain;
     border-radius: 50%;
     z-index: 2;
     overflow: hidden;

@@ -78,7 +78,7 @@ $(document).ready(function () {
             contentWrapEL.removeClass('anim-out');
         }, stageSliderSpeed);
 
-        const dotWidth = 100 / this.slides.length;
+        const dotWidth = 100 / this.slides.length + 1;
         const handlePosition = dotWidth * (this.realIndex) + dotWidth / 2 + '%';
         $('.slider-stage__progress-track').css({width: handlePosition});
         $('.slider-stage__handle').css({left: handlePosition});
