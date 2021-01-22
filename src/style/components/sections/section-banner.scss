@@ -1,6 +1,7 @@
 .section-banner {
   padding-top: 110px;
   padding-bottom: 105px;
+
   .container {
     position: relative;
   }
@@ -34,33 +35,13 @@
     justify-content: flex-end;
     overflow: hidden;
     min-width: 680px;
-    .lava-lamp{
-      width: 256px;
-      height: 256px;
 
-    }
-    &__text{
-      position: absolute;
-      left: 35px;
-      right: 0;
-      bottom: 0;
-      top: 0;
-
-    }
-    &__wrap-img{
-      width: 45%;
-      padding-top: 35px;
-      padding-left: 16px;
-      .img{
-        display: inline;
-        margin-right: 20px;
-      }
-    }
-    &__content{
+    &__right-part {
       position: relative;
       width: 38%;
       padding-left: 35px;
-      &:before{
+
+      &:before {
         position: absolute;
         content: '';
         display: block;
@@ -72,7 +53,8 @@
         background-image: linear-gradient(to right, #ffffff 0% 30%, #fea458 30% 70%, #ffffff 70% 100%);
       }
     }
-    &__main-img{
+
+    &__main-img {
       width: 62%;
     }
   }
@@ -83,7 +65,8 @@
     width: 100%;
     font-size: 12px;
     padding-top: 44px;
-    &__link{
+
+    &__link {
       display: inline-block;
       max-width: 167px;
       margin-left: 75px;
@@ -92,12 +75,14 @@
       line-height: 1.2;
       font-weight: 600;
       color: #575756;
-      span{
+
+      span {
         font-size: 11px;
         font-weight: 400;
         text-transform: uppercase;
       }
-      &:first-child{
+
+      &:first-child {
         margin-left: 0;
       }
     }
@@ -112,10 +97,11 @@
     border: 3px solid #fe920a;
     transition: box-shadow .35s;
     background-image: linear-gradient(to right bottom, #b4c0e3 30%, #ffffff);
-   &:hover,
-   &:focus{
-     box-shadow: 0 0 16px 0 rgba(254, 146, 10, 0.9);
-   }
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 16px 0 rgba(254, 146, 10, 0.9);
+    }
 
     &:before {
       position: absolute;

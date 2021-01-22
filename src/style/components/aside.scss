@@ -1,0 +1,28 @@
+.aside {
+  padding-top: 105px;
+  padding-bottom: 60px;
+  .banner__content {
+    position: relative;
+    max-width: 530px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 600;
+
+    .lava-lamp {
+      width: 328px;
+      height: 328px;
+      left: 15%;
+    }
+
+    .banner__wrap-img {
+      text-align: left;
+      width: 80%;
+      padding-top: 67px;
+      margin: 0 auto 20px;
+      .text_middle{
+        font-size: 36px;
+      }
+    }
+  }
+}

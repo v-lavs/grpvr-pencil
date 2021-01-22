@@ -1,0 +1,42 @@
+.banner {
+  &__content {
+    position: relative;
+    font-family: $secondary-font;
+    font-size: 25px;
+    font-weight: 500;
+    color: #a5a5a5;
+    z-index: 2;
+
+    .lava-lamp {
+      width: 256px;
+      height: 256px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      &__img{
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    sup {
+      font-size: .7em;
+    }
+  }
+
+  &__wrap-img {
+    width: 45%;
+    padding-top: 35px;
+    padding-left: 16px;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 37px;
+    color: #ff8400;
+
+    .img {
+      display: inline;
+      margin-right: 20px;
+    }
+  }
+}
