@@ -56,8 +56,8 @@ $(document).ready(function () {
 
     function setActiveDot(stageSliderContent) {
         const content = $(stageSliderContent.slides[stageSliderContent.realIndex]).find('.slider-content__text-wrap').html();
-        const contentWrapEL = $(stageSliderContent).find('.slider-content__text-wrap');
-
+        const contentWrapEL = $('.slider-stages .slider-content__text-wrap');
+console.log(contentWrapEL)
         contentWrapEL.removeClass('anim-in');
         contentWrapEL.addClass('anim-out');
 
