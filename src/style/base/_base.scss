@@ -213,6 +213,12 @@ body {
   }
 }
 
+@include respond-to($screen-md){
+  .site-title{
+    font-size: 42px;
+  }
+}
+
 @include respond-to($xs){
   .wrap-sections{
     flex-wrap: wrap;

@@ -117,11 +117,11 @@ $(document).ready(function () {
         if ($(window).width() <= 840) {
             if (!navSlider) {
                 navSlider = new Swiper('#navSlider', {
-                    slidesPerView: 2,
+                    slidesPerView: 3,
                     spaceBetween: 10,
                     navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
+                        nextEl: '.main-nav .swiper-button-next',
+                        prevEl: '.main-nav .swiper-button-prev',
                     },
                 });
             }

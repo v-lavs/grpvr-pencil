@@ -528,9 +528,10 @@ body {
 .section-banner .left-part {
   position: absolute;
   top: 50%;
+  left: 0;
   transform: translateY(-50%);
   max-width: 534px;
-  width: 30%;
+  width: 32%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -552,7 +553,6 @@ body {
   margin-left: auto;
   flex-wrap: wrap;
   justify-content: flex-end;
-  overflow: hidden;
   min-width: 680px;
 }
 
@@ -571,7 +571,7 @@ body {
   top: 50%;
   transform: translateY(-50%);
   width: 6px;
-  background-image: linear-gradient(to right, #ffffff 0% 30%, #fea458 30% 70%, #ffffff 70% 100%);
+  background-image: linear-gradient(90deg, #ffffff 0%, #ffffff 30%, #fea458 30%, #fea458 70%, #ffffff 70%, #ffffff 100%);
 }
 
 .section-banner .banner__main-img {
@@ -579,11 +579,14 @@ body {
 }
 
 .section-banner .main-nav {
-  display: flex;
-  justify-content: flex-end;
   width: 100%;
   font-size: 12px;
   padding-top: 44px;
+  max-width: 325px;
+}
+
+.section-banner .main-nav .swiper-wrapper {
+  justify-content: flex-end;
 }
 
 .section-banner .main-nav__link {
@@ -596,6 +599,17 @@ body {
   line-height: 1.2;
   font-weight: 600;
   color: #575756;
+  transition: .35s;
+}
+
+.section-banner .main-nav__link:hover,
+.section-banner .main-nav__link:focus {
+  color: #fe8d0a;
+}
+
+.section-banner .main-nav__link:hover .round,
+.section-banner .main-nav__link:focus .round {
+  box-shadow: 0 0 16px 0 rgba(254, 146, 10, 0.9);
 }
 
 .section-banner .main-nav__link span {
@@ -619,11 +633,6 @@ body {
   background-image: linear-gradient(to right bottom, #b4c0e3 30%, #ffffff);
 }
 
-.section-banner .round:hover,
-.section-banner .round:focus {
-  box-shadow: 0 0 16px 0 rgba(254, 146, 10, 0.9);
-}
-
 .section-banner .round:before {
   position: absolute;
   content: '+';
@@ -638,6 +647,24 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
+}
+
+.section-banner .swiper-button-next,
+.section-banner .swiper-button-prev {
+  width: 10px;
+  height: 23px;
+  top: 33%;
+}
+
+.section-banner .swiper-button-next {
+  right: 0;
+  background-image: url(../assets/img/arrow-duble-color-next.png);
+}
+
+.section-banner .swiper-button-prev {
+  background-image: url(../assets/img/arrow-duble-color.png);
+  left: 0;
+  transform: rotate(0deg);
 }
 
 .section-about .section__header:after {
@@ -1833,7 +1860,7 @@ body {
 }
 
 .aside .banner__content .lava-lamp {
-  width: 328px;
+  max-width: 328px;
   height: 328px;
   left: 15%;
 }
@@ -2154,6 +2181,29 @@ body {
     margin-right: 15px;
   }
 
+  .section-banner .banner__content {
+    font-size: 20px;
+  }
+
+  .section-banner .banner__content .text_middle {
+    font-size: 24px;
+  }
+
+  .section-banner .banner__content .lava-lamp {
+    max-width: 218px;
+    height: 218px;
+    width: 55%;
+  }
+
+  .section-banner .left-part {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  .section-banner .left-part .text_md {
+    font-size: 16px;
+  }
+
   .section-stages .days-label {
     width: 240px;
     font-size: 45px;
@@ -2186,6 +2236,10 @@ body {
 }
 
 @media only screen and (max-width: 1460px) {
+  .site-title {
+    font-size: 42px;
+  }
+
   .header__nav .menu {
     padding-right: 15px;
   }
@@ -2207,6 +2261,16 @@ body {
 
   .header__nav .menu__item a.dropdown:before {
     right: 24px;
+  }
+
+  .section-banner .banner {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .section-banner .part-left {
+    min-height: auto;
+    height: 440px;
   }
 
   .section-reasons .reasons-list {
@@ -2473,6 +2537,58 @@ body {
 
   .note-list {
     margin-left: 0;
+  }
+
+  .section-banner .container {
+    padding-top: 100px;
+  }
+
+  .section-banner .left-part {
+    position: relative;
+    transform: translate(0);
+    width: 100%;
+    margin: -100px auto 0;
+  }
+
+  .section-banner .banner {
+    width: 100%;
+    padding-top: 0;
+    flex-wrap: wrap;
+    padding-left: 40px;
+    flex-direction: column-reverse;
+  }
+
+  .section-banner .banner__right-part:before {
+    display: none;
+  }
+
+  .section-banner .main-nav {
+    position: relative;
+    padding-top: 0;
+    margin-top: -23px;
+    z-index: 2;
+    margin-bottom: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 11px;
+  }
+
+  .section-banner .main-nav .swiper-container {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .section-banner .main-nav .swiper-wrapper {
+    justify-content: flex-start;
+  }
+
+  .section-banner .main-nav .main-nav__link {
+    margin-left: 0;
+  }
+
+  .section-banner .round {
+    width: 44px;
+    height: 44px;
   }
 
   .section-advantages .swiper-wrapper {
