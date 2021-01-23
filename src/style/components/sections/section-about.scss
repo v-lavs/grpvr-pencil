@@ -28,12 +28,14 @@
       width: 48%;
     }
   }
+
   .wrap-img {
     position: relative;
     width: 48vw;
-    padding-left: 14%;
+    padding-left: 15%;
     z-index: 1;
   }
+
   .text_primary-color {
     color: #fc6314;
   }
@@ -41,5 +43,19 @@
   .bg_primary {
     max-width: 657px;
 
+  }
+
+  .img-anim-1 {
+    position: absolute;
+    width: 38%;
+    bottom: 15px;
+    right: 0;
+  }
+
+  .img-anim-2 {
+    position: absolute;
+    top: 24px;
+    right: 0;
+    width: 21.6%;
   }
 }

@@ -1,5 +1,5 @@
 
-.main-nav {
+.header__nav {
   display: flex;
 
   .menu {
@@ -56,7 +56,7 @@
         display: none;
         min-width: 220px;
         background-color: $white;
-        top: 25px;
+        top: 31px;
         left: 1px;
         padding: 15px 10px 10px;
         z-index: 2;
@@ -168,7 +168,7 @@
 
 
 @include respond-to($screen-lg) {
-  .main-nav {
+  .header__nav {
     .lang-switch {
       margin-left: 0;
     }
@@ -181,13 +181,12 @@
 }
 
 @include respond-to($screen-md) {
-  .main-nav {
+  .header__nav {
     .menu {
       padding-right: 15px;
     }
 
     .menu__item {
-      font-size: 13px;
       margin-left: 5px;
       margin-right: 5px;
 
@@ -195,13 +194,20 @@
         padding-left: 15px;
         padding-right: 15px;
       }
+      a.dropdown{
+        padding-left: 20px;
+        padding-right: 37px;
+        &:before{
+          right: 24px;
+        }
+      }
     }
   }
 }
 
 
-@include respond-to($lg) {
-  .main-nav {
+@include respond-to($md) {
+  .header__nav {
     padding-top: 30px;
     position: fixed;
     left: 0;

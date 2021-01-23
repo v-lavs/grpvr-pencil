@@ -1,18 +1,31 @@
 .burger {
   display: none;
-  width: 52px;
+  width: 32px;
   background-color: transparent;
   border: none;
+  margin-left: 20px;
 
   .line {
     display: block;
     width: 100%;
-    background-color: #b2b2b2;
-    height: 4px;
+    background-color: #fe831a;
+    height: 2px;
     margin-bottom: 6px;
 
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+  @include respond-to($xs){
+    width: 22px;
+    .line{
+      height: 1px;
+      margin-bottom: 5px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
     }
   }
 }
@@ -38,7 +51,7 @@
     max-width: 190px;
     margin-left: 15px;
     display: block;
-     }
+  }
 
   .main-logo {
     display: block;
@@ -46,9 +59,46 @@
     margin-right: 15px
   }
 
+  .logo-mob {
+    display: none;
+    max-width: 161px;
+  }
+
   &.header_active {
     background-color: #fff;
     transition: .35s;
+  }
+
+  @include respond-to($screen-md) {
+    .main-logo {
+      max-width: 110px;
+    }
+    .header__logo {
+      max-width: 150px;
+    }
+  }
+  @include respond-to($md) {
+    .header__logo {
+      margin-left: 0;
+      .img-logo{
+        display: none;
+      }
+      .logo-mob {
+        display: block;
+      }
+    }
+  }
+  @include respond-to($xxs) {
+  .container{
+    padding-top: 12px;
+    padding-bottom: 20px;
+  }
+    .header__logo {
+        max-width: 141px;
+    }
+    .main-logo{
+      max-width: 61px;
+    }
   }
 }
 

@@ -232,5 +232,9 @@
       max-width: 300px;
     }
   }
+
+  @include respond-to($sm){
+
+  }
 }
 

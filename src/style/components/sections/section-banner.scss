@@ -70,7 +70,6 @@
       display: inline-block;
       max-width: 167px;
       width: 14%;
-      //margin-left: 75px;
       margin-left: 6.25%;
       text-align: center;
       font-family: $secondary-font;
@@ -120,6 +119,16 @@
       transform: translate(-50%, -50%);
       z-index: 1;
     }
+  }
+
+  @include respond-to($screen-md){
+    .banner{
+
+    }
+
+  }
+  @include respond-to($xxs) {
+    padding-top: 60px;
   }
 }
 

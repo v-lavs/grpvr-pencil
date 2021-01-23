@@ -30,7 +30,7 @@ $(document).ready(function () {
 
     // MOB MENU SCRIPT
 
-    var nav = $('.main-nav');
+    var nav = $('.header__nav');
 
     $('.burger').click(function (e) {
         e.preventDefault();

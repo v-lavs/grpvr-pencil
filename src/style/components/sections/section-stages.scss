@@ -139,7 +139,7 @@
   }
 
   .slider-stages__content {
-    padding: 60px 30px 70px 13%;
+    padding: 60px 17% 70px 13%;
   }
 
   .slider-content__text-wrap {
@@ -265,4 +265,14 @@
       transform: rotate(180deg) scale(1.2);
     }
   }
+
+@include respond-to($screen-lg){
+  .days-label{
+    width: 240px;
+    font-size: 45px;
+    small{
+      font-size: 17px;
+    }
+  }
+}
 }
