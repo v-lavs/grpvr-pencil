@@ -57,7 +57,7 @@ $(document).ready(function () {
     function setActiveDot(stageSliderContent) {
         const content = $(stageSliderContent.slides[stageSliderContent.realIndex]).find('.slider-content__text-wrap').html();
         const contentWrapEL = $('.slider-stages .slider-content__text-wrap');
-console.log(contentWrapEL)
+        console.log(contentWrapEL)
         contentWrapEL.removeClass('anim-in');
         contentWrapEL.addClass('anim-out');
 
@@ -114,11 +114,11 @@ console.log(contentWrapEL)
 
 
     function slidersInit() {
-        if ($(window).width() <= 1040) {
+        if ($(window).width() <= 840) {
             if (!navSlider) {
                 navSlider = new Swiper('#navSlider', {
-                    slidesPerView: 3,
-                    spaceBetween: 20,
+                    slidesPerView: 2,
+                    spaceBetween: 10,
                     navigation: {
                         nextEl: '.swiper-button-next',
                         prevEl: '.swiper-button-prev',
@@ -130,9 +130,10 @@ console.log(contentWrapEL)
                     slidesPerView: 2,
                     spaceBetween: 30,
                     breakpoints: {
-
-                        540: {
+                        840: {
                             slidesPerView: 2,
+                        }, 540: {
+                            slidesPerView: 1,
                         },
                     },
                     navigation: {
@@ -145,11 +146,18 @@ console.log(contentWrapEL)
             if (!advantagesSlider) {
                 advantagesSlider = new Swiper('#advantagesSlider', {
                     slidesPerView: 2,
+                    spaceBetween: 30,
                     breakpoints: {
 
                         540: {
-                            slidesPerView: 1,
+                            slidesPerView: 2,
                         },
+
+                        320:{
+                            slidesPerView: 'auto',
+                            visibilityFullFit: true,
+                            autoResize: false,
+                        }
                     },
                     pagination: {
                         el: '.swiper-pagination',

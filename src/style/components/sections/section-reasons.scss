@@ -1,6 +1,7 @@
 .section-reasons {
   min-height: 670px;
   padding-bottom: 40px;
+
   .section__bg-reasons {
     width: 60%;
     background-image: url(../assets/img/3-a.png);
@@ -8,7 +9,7 @@
     background-size: cover;
   }
 
-  .reasons-list{
+  .reasons-list {
     background-image: url(../assets/img/lips-1.png);
     background-repeat: no-repeat;
     background-position: center bottom 60%;
@@ -24,10 +25,12 @@
     text-transform: uppercase;
     padding-bottom: 73px;
     padding-top: 40px;
-    &__item{
+
+    &__item {
       width: 50%;
       position: relative;
-      .round{
+
+      .round {
         position: absolute;
         width: 108px;
         height: 108px;
@@ -36,7 +39,7 @@
         z-index: -1;
       }
 
-      .reason{
+      .reason {
         position: relative;
         background-color: $white;
         text-align: center;
@@ -50,18 +53,22 @@
         display: inline-flex;
         justify-content: center;
         flex-direction: column;
-        span{
+
+        span {
           text-transform: capitalize;
         }
+
         &:hover,
-        &:focus{
+        &:focus {
           box-shadow: 0 0 27px 0 rgba(255, 0, 72, 0.2);
         }
+
         &:before,
         &:after {
           content: '';
           position: absolute;
         }
+
         &:before {
           top: 0;
           right: 0;
@@ -72,7 +79,8 @@
           border-radius: inherit;
           background: linear-gradient(to right, #ff5400, #ffe5af);
         }
-        &:after{
+
+        &:after {
           background-image: url(../assets/img/ugol1.png);
           width: 26px;
           height: 26px;
@@ -82,105 +90,129 @@
           z-index: 1;
           top: -23px;
         }
-        &:last-child:after{
+
+        &:last-child:after {
           left: 50%;
           transform: translateX(-50%);
 
         }
       }
-      &:nth-child(odd){
+
+      &:nth-child(odd) {
         text-align: right;
       }
-      &:nth-child(6){
+
+      &:nth-child(6) {
         padding-left: 15%;
         margin-top: 60px;
-        .round{
+
+        .round {
           top: -35px;
           left: 27%;
         }
-        .reason:after{
+
+        .reason:after {
           left: 48px;
         }
       }
-      &:nth-child(5){
+
+      &:nth-child(5) {
         padding-right: 15%;
         margin-top: 60px;
-        .round{
+
+        .round {
           top: -35px;
           right: 27%;
         }
-        .reason:after{
+
+        .reason:after {
           right: 20px;
           left: auto;
         }
       }
-      &:nth-child(4){
-              margin-top: 50px;
+
+      &:nth-child(4) {
+        margin-top: 50px;
         padding-left: 30%;
-        .round{
+
+        .round {
           top: 50%;
           transform: translateY(-50%);
           left: 55%;
         }
-        .reason:after{
-          left: -24px;
+
+        .reason:after {
+          left: -22px;
           top: 50%;
           transform: translateY(-50%) rotate(-90deg)
         }
       }
-      &:nth-child(3){
+
+      &:nth-child(3) {
         margin-top: 50px;
         padding-right: 30%;
-        .round{
+
+        .round {
           top: 50%;
           transform: translateY(-50%);
           right: 55%;
         }
-            .reason:after{
+
+        .reason:after {
           top: 50%;
-          right: -24px;
+          right: -22px;
           transform: translateY(-50%) rotate(90deg);
           left: auto;
         }
       }
+
       &:nth-child(1),
-      &:nth-child(2){
-        .round{
+      &:nth-child(2) {
+        .round {
           top: -16px;
         }
+
         .reason:after {
           bottom: -22px;
           transform: rotate(-180deg);
           top: auto;
         }
-        }
-      &:nth-child(2){
+      }
+
+      &:nth-child(2) {
         margin-bottom: 10px;
         padding-left: 10%;
-        .round{
+
+        .round {
           left: 29%
         }
-        .reason:after{
+
+        .reason:after {
           left: 82px;
         }
       }
-      &:nth-child(1){
+
+      &:nth-child(1) {
         margin-bottom: 10px;
         padding-right: 10%;
-        .round{
+
+        .round {
           right: 29%;
         }
-            .reason:after{
+
+        .reason:after {
           right: -26px;
 
         }
       }
-      &:last-child{
+
+      &:last-child {
         padding-top: 17px;
         padding-bottom: 17px;
-        .round{
+
+        .round {
           background-image: url(../assets/img/blob-v.png);
-          background-position:50% bottom;
+          background-position: 50% bottom;
           background-repeat: no-repeat;
           background-size: auto;
           height: 300px;
@@ -189,17 +221,19 @@
           transform: translateX(-50%);
           bottom: 20px;
         }
+
         text-align: center;
       }
     }
   }
 
-  .part-left{
+  .part-left {
     width: 40%;
     padding-left: 80px;
     padding-right: 68px;
     position: relative;
-    &:before{
+
+    &:before {
       position: absolute;
       content: '';
       display: block;
@@ -212,10 +246,11 @@
       border-bottom-right-radius: 20px;
     }
   }
-  .section{
-    &__block-text{
+
+  .section {
+    &__block-text {
       background-image: url('../assets/img/bg-reason.png'),
-      radial-gradient( #ffffff, #dce6ea);
+      radial-gradient(#ffffff, #dce6ea);
 
       background-repeat: no-repeat;
       background-position: right 15px bottom 23%, 0 0;
@@ -225,15 +260,46 @@
       padding: 85px 44px 33px 73px;
       overflow: hidden;
     }
-    &__title{
+
+    &__title {
       margin-bottom: 36px;
     }
-    &__sub-title{
+
+    &__sub-title {
       max-width: 300px;
     }
   }
 
-  @include respond-to($sm){
+  @include respond-to($screen-md) {
+    .reasons-list {
+      font-size: 15px;
+
+      .text_small {
+        font-size: 14px;
+      }
+
+      &__item {
+        .reason {
+          min-height: 40px;
+          min-width: 100px;
+        }
+      }
+    }
+  }
+
+  @include respond-to($lg) {
+    .part-left {
+      padding-left: 40px;
+      padding-right: 40px;
+
+    }
+    .section__block-text {
+      padding-left: 44px;
+    }
+  }
+
+
+  @include respond-to($sm) {
 
   }
 }

@@ -187,4 +187,30 @@ body {
   }
 }
 
+@include respond-to($screen-lg) {
+  body {
+    font-size: 18px;
+  }
+
+  .section__header {
+    padding-top: 15px;
+    padding-left: 80px;
+
+    &:before {
+      width: 58px;
+      height: 60px;
+    }
+  }
+  .section__title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .section__sub-title {
+    font-size: 16px;
+  }
+  .section__text{
+    padding-left: 80px;
+  }
+}
+
 

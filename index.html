@@ -503,9 +503,6 @@
                                          style="background-image: url(assets/img/lips2k.png);"></div>
                                 </div>
                             </div>
-                            <div class="wrap-img">
-
-                            </div>
                         </div>
 
                         <ul class="how-prevent">
@@ -569,9 +566,9 @@
                     <div class="section__sub-title">Як застосовувати Пен-Герпевір®</div>
                 </div>
                 <div class="section__content d-flex">
-                    <div class="swiper-container">
+                    <div class="swiper-container" id="aboutGerpevirSlider">
                         <div class="swiper-wrapper">
-                            <div class="usage-step">
+                            <div class="swiper-slide usage-step">
                                 <div class="usage-step__text">
                                     Крем Пен-Герпевір® рекомендовано дорослим
                                     <span class="text_small">(включаючи пацієнтів літнього віку)</span>
@@ -581,7 +578,7 @@
                                 </div>
                                 <span class="decor-thumb"></span>
                             </div>
-                            <div class="usage-step">
+                            <div class="swiper-slide usage-step">
                                 <div class="usage-step__text">
                                     Крем слід наносити кожні 2 години на уражені ділянки на губах
                                 </div>
@@ -590,7 +587,7 @@
                                 </div>
                                 <span class="decor-thumb"></span>
                             </div>
-                            <div class="usage-step">
+                            <div class="swiper-slide usage-step">
                                 <div class="usage-step__text">
                                     Перед застосуванням крему слід вимити руки
                                 </div>
@@ -627,53 +624,57 @@
                             забезпечує ефективне та швидке позбавлення вiд герпесу губ
                         </div>
                     </div>
-                    <ul class="advantages-list d-flex">
-                        <li class="advantages-list__item">
-                            <div class="advantages-list__text">
-                                Діє проти вірусів
-                                герпесу, у тому
-                                числі проти стійких
-                                до ацикловіру
-                                штамів<sup>4</sup>
+                    <div class="swiper-container advantages-list d-flex" id="advantagesSlider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide advantages-list__item">
+                                <div class="advantages-list__text">
+                                    Діє проти вірусів
+                                    герпесу, у тому
+                                    числі проти стійких
+                                    до ацикловіру
+                                    штамів<sup>4</sup>
+                                </div>
                             </div>
-                        </li>
-                        <li class="advantages-list__item">
-                            <div class="advantages-list__text">
-                                Ефективний на
-                                всіх стадіях
-                                герпесу: діє навіть
-                                після появи
-                                папул та пухирців<sup>4</sup>
+                            <div class="swiper-slide advantages-list__item">
+                                <div class="advantages-list__text">
+                                    Ефективний на
+                                    всіх стадіях
+                                    герпесу: діє навіть
+                                    після появи
+                                    папул та пухирців<sup>4</sup>
+                                </div>
                             </div>
-                        </li>
-                        <li class="advantages-list__item">
-                            <div class="advantages-list__text">
-                                Зменшує больові
-                                відчуття та
-                                тривалість періоду
-                                лущення кірки, яка
-                                утворюється
-                                при вірусній дії<sup>4</sup>
+                            <div class="swiper-slide advantages-list__item">
+                                <div class="advantages-list__text">
+                                    Зменшує больові
+                                    відчуття та
+                                    тривалість періоду
+                                    лущення кірки, яка
+                                    утворюється
+                                    при вірусній дії<sup>4</sup>
+                                </div>
                             </div>
-                        </li>
-                        <li class="advantages-list__item">
-                            <div class="advantages-list__text">
-                                Значно скорочує
-                                час загоєння.
-                                Курс лікування
-                                4 дні<sup>4</sup>
+                            <div class="swiper-slide advantages-list__item">
+                                <div class="advantages-list__text">
+                                    Значно скорочує
+                                    час загоєння.
+                                    Курс лікування
+                                    4 дні<sup>4</sup>
+                                </div>
                             </div>
-                        </li>
-                        <li class="advantages-list__item">
-                            <div class="advantages-list__text">
-                                Противірусна дія
-                                починається через
-                                1 хвилину після
-                                нанесення<sup>5</sup>
+                            <div class="swiper-slide advantages-list__item">
+                                <div class="advantages-list__text">
+                                    Противірусна дія
+                                    починається через
+                                    1 хвилину після
+                                    нанесення<sup>5</sup>
+                                </div>
                             </div>
-                        </li>
-                    </ul>
-                    <!-- block reklama -->
+                        </div>
+
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
                 </div>
             </div>
             <aside class="aside">
@@ -741,7 +742,7 @@
                 <div class="section__header">
                     <h2 class="section__title">Рекламний ролик</h2>
                 </div>
-                <a href="#" class="wrap-video"  id="video-modal-trigger">
+                <a href="#" class="wrap-video" id="video-modal-trigger">
                     <img src="assets/img/poster.jpg" alt="" class="poster">
                     <button type="button" class="btn_video" aria-label="open-video"></button>
                 </a>
@@ -750,7 +751,8 @@
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                              viewBox="0 0 20 20">
                             <title>close</title>
-                            <path fill="#ffffff" d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"></path>
+                            <path fill="#ffffff"
+                                  d="M10 8.586l-7.071-7.071-1.414 1.414 7.071 7.071-7.071 7.071 1.414 1.414 7.071-7.071 7.071 7.071 1.414-1.414-7.071-7.071 7.071-7.071-1.414-1.414-7.071 7.071z"></path>
                         </svg>
                     </button>
                     <div class="popup">
