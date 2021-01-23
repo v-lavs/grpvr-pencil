@@ -17,47 +17,37 @@ body {
   width: 100%;
   height: auto;
 }
-.site-title{
+
+.site-title {
   font-size: 49px;
   line-height: .8;
   text-transform: uppercase;
   color: $black;
   letter-spacing: 0.36px;
-  span{
+
+  span {
     color: $white;
-     font-size: 0.615em;
+    font-size: 0.615em;
   }
 }
 
-.main__bg{
-  background-image: linear-gradient(to bottom, rgba(221,230,235,0) 15%, rgba(221,230,235,1) 30%, rgba(221,230,235,0));
+.main__bg {
+  background-image: linear-gradient(to bottom, rgba(221, 230, 235, 0), rgba(221, 230, 235, 1));
   position: relative;
-  padding-bottom: 123px;
-&:after,
-&:before{
-  position: absolute;
-  content: '';
-  display: block;
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: 1;
-}
 
-  &:after{
+  &:before {
+    position: absolute;
+    content: '';
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
     background-image: url(../assets/img/decor-preventions.png);
     background-size: auto;
     width: 547px;
     height: 547px;
     left: -5%;
     top: 0;
-  }
-  &:before{
-    background-image: url(../assets/img/8.png);
-    background-size: auto;
-    width: 390px;
-    height: 705px;
-    left: 0;
-    bottom: 123px;
+    z-index: 1;
   }
 }
 
@@ -78,7 +68,11 @@ body {
   display: flex;
 }
 
-.color-white{
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.color-white {
   color: $white;
 }
 
@@ -143,7 +137,7 @@ body {
   margin-bottom: 20px;
 }
 
-.where-buy{
+.where-buy {
   position: fixed;
   display: block;
   background-image: url(../assets/img/link-buy.png);
@@ -153,7 +147,7 @@ body {
   width: 171px;
   height: 171px;
   background-color: $white;
-  border:2px dashed #fe831a;
+  border: 2px dashed #fe831a;
   border-radius: 50%;
 
   bottom: 30vh;
@@ -174,10 +168,11 @@ body {
   z-index: 800;
 }
 
-.mouse-parallax{
+.mouse-parallax {
   position: relative;
   height: 100%;
-  &__bg{
+
+  &__bg {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -185,7 +180,8 @@ body {
     transition: .1s;
     z-index: -1;
   }
-  &__img{
+
+  &__img {
     position: absolute;
     width: auto;
   }

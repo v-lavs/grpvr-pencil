@@ -1,5 +1,35 @@
 .section-advantages {
-  padding-top: 8.5%;
+  position: relative;
+  padding-top: 12.5%;
+  padding-bottom: 123px;
+  background-image: linear-gradient(to bottom, rgba(221,230,235,1), rgba(221,230,235, .1), rgba(221,230,235,0));
+  &:after,
+  &:before{
+    position: absolute;
+    content: '';
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+  }
+
+  &:after{
+    background-image: url(../assets/img/9.png);
+    background-size: auto;
+    width: 486px;
+    height: 767px;
+    right: 0;
+    bottom: 0;
+  }
+  &:before{
+    background-image: url(../assets/img/8.png);
+    background-size: auto;
+    width: 390px;
+    height: 705px;
+    left: 0;
+    bottom: 123px;
+  }
+
   .advantages-list {
     flex-wrap: wrap;
     &__item {

@@ -1,6 +1,21 @@
-.section-location{
-.block-btn{
-  width: 50%;
-  background-color: rosybrown;
-}
+.section-location {
+  padding-top: 54px;
+  padding-bottom: 50px;
+  width: 45%;
+
+  .section__header {
+    margin-bottom: 56px;
+  }
+
+  .wrap-map{
+    width: 53%;
+    padding-left: 50px;
+    padding-bottom: 40px;
+  }
+
+
+  .btns-slider{
+    max-width: 520px;
+    width: 60%;
+  }
 }

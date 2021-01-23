@@ -26,6 +26,9 @@
   }
 
   .disclaimer {
+
+    display: none;
+
     position: fixed;
     bottom: 0;
     left: 0;
@@ -97,7 +100,7 @@
   line-height: 1.14;
   text-align: center;
   color: #838383;
-  padding: 50px 60px 0;
+  padding: 0 60px;
 }
 
 .note-list {

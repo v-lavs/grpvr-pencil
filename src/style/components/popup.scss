@@ -1,0 +1,42 @@
+.popup-wrapper {
+  display: none;
+  max-height: 100%;
+   padding: 40px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1100;
+  justify-content: center;
+  align-items: center;
+  &.active{
+    display: flex;
+  }
+}
+
+.popup {
+  position: relative;
+  background-color: #000;
+  max-width: 1200px;
+  width: 80%;
+  padding: 10px;
+  border-radius: 8px;
+
+  .btn-close {
+    position: relative;
+    display: block;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    outline: none;
+  }
+  .video{
+    width: 100%;
+    height: auto;
+  }
+}

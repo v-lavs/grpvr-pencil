@@ -8,9 +8,8 @@
  **/
 
 $(document).ready(function () {
-    /**
-     * HEADER SCROLL
-     */
+    // HEADER SCROLL
+
 
     var scrolled;
 
@@ -28,9 +27,8 @@ $(document).ready(function () {
     });
     onHeaderScroll();
 
-    /**
-     * MOB MENU SCRIPT
-     **/
+
+      // MOB MENU SCRIPT
 
     var nav = $('.main-nav');
 
@@ -47,27 +45,18 @@ $(document).ready(function () {
     });
 
 
-    // slider
+    // SLIDERS
 
     var navSlider;
     var aboutGerpevirSlider;
     var advantagesSlider;
 
+    //stage-slider
     const stageSliderSpeed = 500;
 
-    const stagesSlider = new Swiper('#stagesSlider', {
-        speed: stageSliderSpeed,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        }
-    });
-
-    const stageSliderContent = $('#stagesSlideContent');
-
-    stagesSlider.on('slideChange', function () {
-        const content = $(this.slides[this.realIndex]).find('.slider-content__text-wrap').html();
-        const contentWrapEL = stageSliderContent.find('.slider-content__text-wrap');
+    function setActiveDot (stageSliderContent) {
+        const content = $(stageSliderContent.slides[stageSliderContent.realIndex]).find('.slider-content__text-wrap').html();
+        const contentWrapEL = $(stageSliderContent).find('.slider-content__text-wrap');
 
         contentWrapEL.removeClass('anim-in');
         contentWrapEL.addClass('anim-out');
@@ -78,26 +67,50 @@ $(document).ready(function () {
             contentWrapEL.removeClass('anim-out');
         }, stageSliderSpeed);
 
-        const dotWidth = 100 / this.slides.length + 1;
-        const handlePosition = dotWidth * (this.realIndex) + dotWidth / 2 + '%';
+        const dotWidth = 100 / stageSliderContent.slides.length;
+        const handlePosition = dotWidth * (stageSliderContent.realIndex) + dotWidth / 2 + '%';
         $('.slider-stage__progress-track').css({width: handlePosition});
         $('.slider-stage__handle').css({left: handlePosition});
 
         $('.slider-stage__pagination-item').removeClass('active');
-        $('.slider-stage__pagination-item').eq(this.realIndex).addClass('active');
+        $('.slider-stage__pagination-item').eq(stageSliderContent.realIndex).addClass('active');
+    }
+
+    const stagesSlider = new Swiper('#stagesSlider', {
+        speed: stageSliderSpeed,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        on: {
+            init: function () {
+                setActiveDot(this);
+            },
+            slideChange: function () {
+                setActiveDot(this);
+            },
+
+        },
     });
+
+    const stageSliderContent = $('#stagesSlideContent');
+
 
     $('.slider-stage__pagination-link').click(function (e) {
         e.preventDefault();
         stagesSlider.slideTo($(this).parent().index())
     });
 
-    var btnSlider = new Swiper('#btnSlider', {
+    //block-btn slider
+
+    var blockBtnSlider = new Swiper('#blockBtnSlider', {
+        slidesPerView: 2,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
     });
+
 
     function slidersInit() {
         if ($(window).width() <= 1040) {
@@ -189,10 +202,33 @@ $(document).ready(function () {
             'transform',
             'translate(-' + x * 40 + 'px, +' + y * 50 + 'px)'
         );
+        $activeSection.find('.mouse-parallax__bg-3').css(
+            'transform',
+            'translate(-' + x * 30 + 'px, -' + y * 60 + 'px)'
+        );
 
     });
 
-    $(window).on('resize', function () {
+      //POPUP VIDEO
+
+    $("#video-modal-trigger").click(function (e) {
+        e.preventDefault();
+        $("#video-popup-wrapper").addClass("active");
+        $("body").addClass("overflow-hidden");
+    });
+
+    $("#video-popup-wrapper, #close-video-popup").click(function (e) {
+        $("#video-popup-wrapper").removeClass("active");
+        $("body").removeClass("overflow-hidden");
+        var video = $('#video');
+
+        video.attr('src', '');
+        var src = video.attr('src');
+        video.attr('src', src);
+
+    });
+
+      $(window).on('resize', function () {
         slidersInit();
     });
 });

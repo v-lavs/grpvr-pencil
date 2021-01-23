@@ -6,6 +6,8 @@
   .section {
     &__thumb {
       width: 48%;
+      display: flex;
+      justify-content: flex-end;
     }
 
     &__content {
@@ -27,14 +29,39 @@
   }
 
   .mouse-parallax {
-    width: 48vw;
-    left: -10%;
+    width: 50vw;
+    flex-shrink: 0;
+
+    &__bg {
+      z-index: 2;
+      .mouse-parallax__img-1{
+        bottom: 0;
+        left: 20%;
+        top: auto;
+      }
+    }
+    &__bg-2{
+      .mouse-parallax__img-2{
+        top: 10%;
+        right: 0;
+      }
+    }
+    &__bg-3{
+      .mouse-parallax__img-3{
+        top: 20%;
+        left: 50%;
+      }
+    }
 
     &__content {
+      padding-top: 80px;
       display: flex;
       justify-content: flex-end;
       align-items: flex-end;
-      height: 560px;
+      height: 646px;
+      .mouse-parallax__img{
+        top: 80px;
+      }
     }
 
     &__img {
