@@ -33,9 +33,10 @@
     background-position: right bottom;
   }
 
-  .swiper-wrapper{
+  .swiper-wrapper {
     flex-wrap: wrap;
   }
+
   .advantages-list {
 
     &__item {
@@ -136,39 +137,54 @@
     }
   }
   @include respond-to($md) {
-    .section__thumb{
+    .section__thumb {
       display: none;
     }
-    .section__content{
+    .section__content {
       width: 100%;
     }
     .advantages-list {
       .advantages-list__item {
-        width: 25%;
+        width: 28%;
       }
     }
   }
-  @include respond-to($xs){
-    .swiper-wrapper{
+  @include respond-to($xs) {
+    .swiper-wrapper {
       flex-wrap: nowrap;
     }
-    .swiper-slide.advantages-list__item{
+    .swiper-slide.advantages-list__item {
       margin-right: 0;
-      width: 80%;
+      width: 60%;
+
     }
-    .advantages-list__item{
-      height: 100%;
+    .advantages-list__item {
       font-size: 21px;
-      &:before{
+      height: auto;
+      &:before {
         width: 67px;
         height: 67px;
+        top: 4px;
+      }
+
+      .advantages-list__text {
+        height: 100%;
       }
     }
-    .section__content{
+    .advantages-list {
+      padding-bottom: 30px;
+    }
+
+    .section__content {
       padding-left: 0;
     }
-    .swiper-pagination{
+    .swiper-pagination {
       bottom: 5px;
+    }
+  }
+  @include respond-to($xxs){
+    .swiper-slide.advantages-list__item {
+      width: 80%;
     }
   }
 }

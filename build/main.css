@@ -504,6 +504,18 @@ body {
   transform: rotate(180deg);
 }
 
+.swiper-pagination-bullet {
+  width: 11px;
+  height: 11px;
+  border: 1px solid #fc7617;
+  background-color: #fff;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #fc7617;
+}
+
 .section-banner {
   padding-top: 110px;
   padding-bottom: 105px;
@@ -2405,7 +2417,7 @@ body {
   }
 
   .section-advantages .advantages-list .advantages-list__item {
-    width: 25%;
+    width: 28%;
   }
 
   .header .header__logo {
@@ -2422,23 +2434,73 @@ body {
 }
 
 @media only screen and (max-width: 840px) {
+  .wrap-sections {
+    flex-wrap: wrap;
+  }
+
+  .wrap-sections .section-location,
+  .wrap-sections .section-video {
+    width: 100%;
+  }
+
+  .section__title {
+    font-size: 18px;
+    margin-bottom: 17px;
+  }
+
+  .section__sub-title {
+    font-size: 11px;
+    opacity: .75;
+  }
+
+  .section__header {
+    padding-left: 22px;
+  }
+
+  .section__header:before {
+    top: -37px;
+    left: 22px;
+    width: 37px;
+    height: 38px;
+  }
+
+  .footnote {
+    font-size: 7px;
+    text-align: left;
+    padding-left: 26px;
+    padding-right: 15px;
+  }
+
+  .note-list {
+    margin-left: 0;
+  }
+
   .section-advantages .swiper-wrapper {
     flex-wrap: nowrap;
   }
 
   .section-advantages .swiper-slide.advantages-list__item {
     margin-right: 0;
-    width: 80%;
+    width: 60%;
   }
 
   .section-advantages .advantages-list__item {
-    height: 100%;
     font-size: 21px;
+    height: auto;
   }
 
   .section-advantages .advantages-list__item:before {
     width: 67px;
     height: 67px;
+    top: 4px;
+  }
+
+  .section-advantages .advantages-list__item .advantages-list__text {
+    height: 100%;
+  }
+
+  .section-advantages .advantages-list {
+    padding-bottom: 30px;
   }
 
   .section-advantages .section__content {
@@ -2463,9 +2525,19 @@ body {
   }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 540px) {
   .section-banner {
     padding-top: 60px;
+  }
+
+  .section-advantages .swiper-slide.advantages-list__item {
+    width: 80%;
+  }
+
+  .section-video .wrap-video {
+    width: 100%;
+    margin-left: 0;
+    padding-top: 43.5%;
   }
 
   .header .container {

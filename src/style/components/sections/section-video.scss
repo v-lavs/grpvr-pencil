@@ -53,4 +53,12 @@
 
     }
   }
+
+  @include respond-to($xxs){
+    .wrap-video{
+      width: 100%;
+      margin-left: 0;
+      padding-top: 43.5%;
+    }
+  }
 }

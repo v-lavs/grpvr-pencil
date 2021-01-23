@@ -145,14 +145,12 @@ $(document).ready(function () {
 
             if (!advantagesSlider) {
                 advantagesSlider = new Swiper('#advantagesSlider', {
-                    slidesPerView: 2,
+                    // slidesPerView: 2,
                     spaceBetween: 30,
+                    slidesPerView: 'auto',
+                    visibilityFullFit: true,
+                    autoResize: false,
                     breakpoints: {
-
-                        540: {
-                            slidesPerView: 2,
-                        },
-
                         320:{
                             slidesPerView: 'auto',
                             visibilityFullFit: true,
