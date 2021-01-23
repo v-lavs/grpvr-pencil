@@ -28,7 +28,7 @@ $(document).ready(function () {
     onHeaderScroll();
 
 
-      // MOB MENU SCRIPT
+    // MOB MENU SCRIPT
 
     var nav = $('.main-nav');
 
@@ -54,7 +54,7 @@ $(document).ready(function () {
     //stage-slider
     const stageSliderSpeed = 500;
 
-    function setActiveDot (stageSliderContent) {
+    function setActiveDot(stageSliderContent) {
         const content = $(stageSliderContent.slides[stageSliderContent.realIndex]).find('.slider-content__text-wrap').html();
         const contentWrapEL = $(stageSliderContent).find('.slider-content__text-wrap');
 
@@ -105,6 +105,7 @@ $(document).ready(function () {
 
     var blockBtnSlider = new Swiper('#blockBtnSlider', {
         slidesPerView: 2,
+        spaceBetween: 80,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -209,7 +210,7 @@ $(document).ready(function () {
 
     });
 
-      //POPUP VIDEO
+    //POPUP VIDEO
 
     $("#video-modal-trigger").click(function (e) {
         e.preventDefault();
@@ -228,7 +229,7 @@ $(document).ready(function () {
 
     });
 
-      $(window).on('resize', function () {
+    $(window).on('resize', function () {
         slidersInit();
     });
 });

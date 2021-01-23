@@ -243,29 +243,22 @@
 
   .swiper-button-next,
   .swiper-button-prev {
-    &:after {
-      display: none;
-    }
 
     background-image: url(../assets/img/arrow-sw-white.png);
     width: 43px;
     height: 100px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    transition: .35s;
+
       }
 
   .swiper-button-next {
-    padding-right: 15%;
-    &:hover,
-    &:focus {
-      transform: scale(1.2);
-    }
-  }
+     padding-right: 15%;
+     &:hover,
+     &:focus {
+       transform: scale(1.2);
+     }
+   }
 
   .swiper-button-prev {
-    transform: rotate(180deg);
     padding-left: 15%;
     &:hover,
     &:focus {

@@ -458,12 +458,12 @@ body {
   font-size: 19px;
   color: #000000;
   border-radius: 6px;
-  background-color: transparent;
   border: none;
   padding: 10px 20px 9px;
   transition: .35s;
   line-height: 1;
   font-family: "Montserrat", sans-serif;
+  background-color: #fff;
 }
 
 .btn:hover,
@@ -492,6 +492,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  transition: .35s;
 }
 
 .swiper-button-next:after,
@@ -576,7 +577,8 @@ body {
 .section-banner .main-nav__link {
   display: inline-block;
   max-width: 167px;
-  margin-left: 75px;
+  width: 14%;
+  margin-left: 6.25%;
   text-align: center;
   font-family: "Montserrat", sans-serif;
   line-height: 1.2;
@@ -708,16 +710,19 @@ body {
   bottom: 0;
   left: 20%;
   top: auto;
+  width: 36.25%;
 }
 
 .section-manifestations .mouse-parallax__bg-2 .mouse-parallax__img-2 {
   top: 10%;
   right: 0;
+  width: 24%;
 }
 
 .section-manifestations .mouse-parallax__bg-3 .mouse-parallax__img-3 {
   top: 20%;
   left: 50%;
+  width: 15%;
 }
 
 .section-manifestations .mouse-parallax__content {
@@ -1245,15 +1250,6 @@ body {
   background-image: url(../assets/img/arrow-sw-white.png);
   width: 43px;
   height: 100px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  transition: .35s;
-}
-
-.section-stages .swiper-button-next:after,
-.section-stages .swiper-button-prev:after {
-  display: none;
 }
 
 .section-stages .swiper-button-next {
@@ -1266,7 +1262,6 @@ body {
 }
 
 .section-stages .swiper-button-prev {
-  transform: rotate(180deg);
   padding-left: 15%;
 }
 
@@ -1704,7 +1699,35 @@ body {
 
 .section-location .btns-slider {
   max-width: 520px;
-  width: 60%;
+  margin-left: 0;
+  width: 61%;
+  padding: 5px;
+}
+
+.section-location .btns-slider .btn {
+  margin: 0 auto;
+  min-width: 200px;
+}
+
+.section-location .btn-slide {
+  text-align: center;
+  width: 50%;
+}
+
+.section-location .swiper-button-next,
+.section-location .swiper-button-prev {
+  background-image: url(../assets/img/arrow2.png);
+  width: 14px;
+  height: 26px;
+  left: 50%;
+}
+
+.section-location .swiper-button-next {
+  transform: translate(10px, 10px);
+}
+
+.section-location .swiper-button-prev {
+  transform: rotate(180deg) translate(20px, -10px);
 }
 
 .section-video {

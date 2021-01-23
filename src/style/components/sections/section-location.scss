@@ -7,15 +7,43 @@
     margin-bottom: 56px;
   }
 
-  .wrap-map{
+  .wrap-map {
     width: 53%;
     padding-left: 50px;
     padding-bottom: 40px;
   }
 
 
-  .btns-slider{
+  .btns-slider {
     max-width: 520px;
-    width: 60%;
+    margin-left: 0;
+    width: 61%;
+    padding: 5px;
+    .btn {
+      margin: 0 auto;
+      min-width: 200px;
+    }
+  }
+
+  .btn-slide {
+    text-align: center;
+    width: 50%;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+
+    background-image: url(../assets/img/arrow2.png);
+    width: 14px;
+    height: 26px;
+    left: 50%;
+  }
+
+  .swiper-button-next {
+    transform: translate(10px, 10px);
+  }
+
+  .swiper-button-prev {
+    transform: rotate(180deg) translate(20px, -10px);
   }
 }

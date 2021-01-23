@@ -69,7 +69,9 @@
     &__link {
       display: inline-block;
       max-width: 167px;
-      margin-left: 75px;
+      width: 14%;
+      //margin-left: 75px;
+      margin-left: 6.25%;
       text-align: center;
       font-family: $secondary-font;
       line-height: 1.2;
