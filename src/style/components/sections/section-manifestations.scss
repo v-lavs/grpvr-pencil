@@ -34,22 +34,24 @@
 
     &__bg {
       z-index: 2;
-      .mouse-parallax__img-1{
-        bottom: 0;
+
+      .mouse-parallax__img-1 {
         left: 20%;
-        top: auto;
+        top: 40%;
         width: 36.25%;
       }
     }
-    &__bg-2{
-      .mouse-parallax__img-2{
+
+    &__bg-2 {
+      .mouse-parallax__img-2 {
         top: 10%;
         right: 0;
         width: 24%;
       }
     }
-    &__bg-3{
-      .mouse-parallax__img-3{
+
+    &__bg-3 {
+      .mouse-parallax__img-3 {
         top: 20%;
         left: 50%;
         width: 15%;
@@ -62,7 +64,8 @@
       justify-content: flex-end;
       align-items: flex-end;
       height: 646px;
-      .mouse-parallax__img{
+
+      .mouse-parallax__img {
         top: 80px;
       }
     }
@@ -73,4 +76,24 @@
     }
   }
 
+  @include respond-to($screen-lg) {
+    .mouse-parallax__content {
+      height: 546px;
+    }
+  }
+  @include respond-to($screen-md) {
+    .mouse-parallax__content {
+      height: 517px;
+    }
+  }
+  @include respond-to($sm) {
+    .mouse-parallax__content {
+      height: 430px;
+    }
+  }
+  @include respond-to($xs){
+    .signature {
+      display: none;
+    }
+  }
 }

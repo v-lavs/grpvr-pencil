@@ -243,11 +243,11 @@
 
   .swiper-button-next,
   .swiper-button-prev {
-
+    display: block;
     background-image: url(../assets/img/arrow-sw-white.png);
     width: 43px;
     height: 100px;
-
+    margin-top: -45px;
       }
 
   .swiper-button-next {
@@ -309,15 +309,40 @@
       height: 770px;
     }
     .slider-content__text-wrap{
-      min-height: 465px;
+      min-height: 400px;
+      font-size: 20px;
+    }
+    .image-slider__circle{
+      max-width: 400px;
     }
     .slider-stage__pagination{
-      font-size: 14px;
+      font-size: 12px;
     }
     .slider-stage__pagination-item{
+      min-height: 98px;
       &.active{
-        font-size: 22px;
+        font-size: 18px;
       }
+    }
+    .slider-content__title {
+      font-size: 25px;
+      .icon{
+        width: 90px;
+        height: 90px;
+      }
+    }
+    .slider-stage__handle{
+      width: 80px;
+      height: 20px;
+    }
+    .slider-stage__progress {
+      border-width: 2px;
+    }
+  }
+  @include respond-to($lg){
+    .slider-stages__part-bg:before {
+      width: 574px;
+      height: 574px;
     }
   }
 }

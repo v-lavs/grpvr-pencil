@@ -1,5 +1,6 @@
 .swiper-button-next,
 .swiper-button-prev {
+  display: none;
   &:after {
     display: none;
   }
@@ -18,13 +19,22 @@
 .swiper-pagination {
 
 }
-.swiper-pagination-bullet{
+
+.swiper-pagination-bullet {
   width: 11px;
   height: 11px;
   border: 1px solid #fc7617;
   background-color: #fff;
   opacity: 1;
-  &.swiper-pagination-bullet-active{
+
+  &.swiper-pagination-bullet-active {
     background-color: #fc7617;
+  }
+}
+
+@include respond-to($xs) {
+  .swiper-button-next,
+  .swiper-button-prev{
+    display: block;
   }
 }

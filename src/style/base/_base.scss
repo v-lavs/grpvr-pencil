@@ -208,50 +208,81 @@ body {
   .section__sub-title {
     font-size: 16px;
   }
-  .section__text{
+  .section__text {
     padding-left: 80px;
   }
 }
 
-@include respond-to($screen-md){
-  .site-title{
+@include respond-to($screen-md) {
+  .site-title {
     font-size: 42px;
   }
 }
 
-@include respond-to($xs){
-  .wrap-sections{
+@include respond-to($md) {
+  .site-title {
+    font-size: 37px;
+  }
+  .section__title{
+    font-size: 22px;
+  }
+  .section__header{
+    padding-top: 8px;
+    padding-left: 65px;
+    &:before {
+      width: 44px;
+      height: 46px;
+    }
+  }
+}
+
+@include respond-to($sm) {
+  html,
+  body{
+    font-size: 16px;
+  }
+  .section__sub-title {
+    font-size: 14px;
+  }
+}
+
+@include respond-to($xxs) {
+  .wrap-sections {
     flex-wrap: wrap;
+
     .section-location,
-    .section-video{
+    .section-video {
       width: 100%;
     }
   }
-  .section__title{
+  .section__title {
     font-size: 18px;
     margin-bottom: 17px;
   }
-  .section__sub-title{
+  .section__sub-title {
     font-size: 11px;
     opacity: .75;
   }
-
-  .section__header{
+  .section__text {
     padding-left: 22px;
-    &:before{
+  }
+  .section__header {
+    padding-left: 22px;
+
+    &:before {
       top: -37px;
       left: 22px;
       width: 37px;
       height: 38px;
     }
   }
-  .footnote{
+  .footnote {
     font-size: 7px;
     text-align: left;
     padding-left: 26px;
     padding-right: 15px;
   }
-  .note-list{
+  .note-list {
     margin-left: 0;
   }
 }
