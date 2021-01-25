@@ -189,9 +189,9 @@ $(document).ready(function () {
     });
 
 //HIDE TEXT
-    $('.text-hide .read-more').on('click', function (e) {
+    $('.text-hide .open-up').on('click', function (e) {
         e.preventDefault();
-        $(this).siblings().removeClass('hide');
+        $('.text-hide .mob-hide').removeClass('mob-hide');
         $(this).hide();
     });
 

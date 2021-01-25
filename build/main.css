@@ -727,22 +727,46 @@ body {
   width: 21.6%;
 }
 
+.section-about .open-up {
+  display: none;
+}
+
+.section-about .read-more {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.32px;
+  padding: 2px 17px 3px;
+  border-radius: 3px;
+  background-image: linear-gradient(to right, #ff5400, #ff9800);
+  transition: .35s;
+}
+
+.section-about .read-more:hover,
+.section-about .read-more:focus {
+  background-image: linear-gradient(to right, #ff9800, #ff5400);
+}
+
 .section-manifestations {
   padding-bottom: 11.5%;
   position: relative;
 }
 
 .section-manifestations .section__thumb {
-  width: 48%;
+  left: -40px;
+  top: 0;
+  position: absolute;
+  width: 50vw;
   display: flex;
   justify-content: flex-end;
 }
 
 .section-manifestations .section__content {
-  width: 52%;
-  padding: 20px 9.25%;
+  display: flex;
+  padding: 20px 9.25% 20px 61.25%;
   flex-direction: column;
   justify-content: center;
+  min-height: 646px;
 }
 
 .section-manifestations .signature {
@@ -756,8 +780,7 @@ body {
 }
 
 .section-manifestations .mouse-parallax {
-  width: 50vw;
-  flex-shrink: 0;
+  width: 100%;
 }
 
 .section-manifestations .mouse-parallax__bg {
@@ -783,7 +806,6 @@ body {
 }
 
 .section-manifestations .mouse-parallax__content {
-  padding-top: 80px;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -2212,7 +2234,11 @@ body {
   }
 
   .section-manifestations .mouse-parallax__content {
-    height: 546px;
+    height: 540px;
+  }
+
+  .section-manifestations .section__content {
+    min-height: 600px;
   }
 
   .section-stages .days-label {
@@ -2283,8 +2309,8 @@ body {
     min-height: 440px;
   }
 
-  .section-manifestations .mouse-parallax__content {
-    height: 517px;
+  .section-manifestations .section__content {
+    min-height: 517px;
   }
 
   .section-reasons .reasons-list {
@@ -2370,6 +2396,14 @@ body {
 }
 
 @media only screen and (max-width: 1280px) {
+  .section-about {
+    padding-top: 40px;
+  }
+
+  .section-about .wrap-img {
+    padding-left: 10%;
+  }
+
   .section-reasons .part-left {
     padding-left: 40px;
     padding-right: 40px;
@@ -2392,6 +2426,10 @@ body {
 
   .section__title {
     font-size: 22px;
+  }
+
+  .section__text {
+    padding-left: 65px;
   }
 
   .section__header {
@@ -2544,6 +2582,15 @@ body {
     font-size: 20px;
   }
 
+  .section-manifestations .section__content {
+    padding-left: 55%;
+    min-height: 460px;
+  }
+
+  .section-manifestations .mouse-parallax__content {
+    height: 460px;
+  }
+
   .section-advantages .section__thumb {
     display: none;
   }
@@ -2587,8 +2634,16 @@ body {
     display: none;
   }
 
-  .section-manifestations .mouse-parallax__content {
-    height: 430px;
+  .section-manifestations {
+    padding-bottom: 5%;
+  }
+
+  .section-manifestations .section__content {
+    min-height: 430px;
+  }
+
+  .section-manifestations .signature {
+    display: none;
   }
 }
 
@@ -2690,8 +2745,78 @@ body {
     padding-left: 25px;
   }
 
-  .section-manifestations .signature {
+  .section-about {
+    padding-top: 0;
+  }
+
+  .section-about .mob-hide {
+    position: absolute;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+  }
+
+  .section-about .open-up {
+    display: inline-block;
+    position: relative;
+    z-index: 4;
+    font-weight: 700;
+  }
+
+  .section-about .text_primary-color {
+    color: #000;
+  }
+
+  .section-about .bg_primary {
     display: none;
+  }
+
+  .section-about .section__content {
+    padding-right: 0;
+  }
+
+  .section-about .section__header:after {
+    display: none;
+  }
+
+  .section-about .section__thumb {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 50px;
+  }
+
+  .section-about .wrap-img {
+    margin-right: -15px;
+  }
+
+  .section-manifestations {
+    padding-top: 100px;
+  }
+
+  .section-manifestations .section__content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .section-manifestations .section__thumb {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .section-manifestations .mouse-parallax {
+    margin-bottom: 30px;
+  }
+
+  .section-manifestations .mouse-parallax__content {
+    max-height: 100%;
+  }
+
+  .section-manifestations .mouse-parallax__content .mouse-parallax__img {
+    top: 0;
   }
 
   .section-advantages .swiper-wrapper {

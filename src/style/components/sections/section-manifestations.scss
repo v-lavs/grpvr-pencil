@@ -2,19 +2,23 @@
   padding-bottom: 11.5%;
   position: relative;
 
-
   .section {
     &__thumb {
-      width: 48%;
+      left: -40px;
+      top: 0;
+      position: absolute;
+      width: 50vw;
       display: flex;
       justify-content: flex-end;
+
     }
 
     &__content {
-      width: 52%;
-      padding: 20px 9.25%;
+      display: flex;
+      padding: 20px 9.25% 20px 61.25%;
       flex-direction: column;
       justify-content: center;
+      min-height: 646px;
     }
   }
 
@@ -29,8 +33,7 @@
   }
 
   .mouse-parallax {
-    width: 50vw;
-    flex-shrink: 0;
+    width: 100%;
 
     &__bg {
       z-index: 2;
@@ -59,8 +62,7 @@
     }
 
     &__content {
-      padding-top: 80px;
-      display: flex;
+       display: flex;
       justify-content: flex-end;
       align-items: flex-end;
       height: 646px;
@@ -78,22 +80,55 @@
 
   @include respond-to($screen-lg) {
     .mouse-parallax__content {
-      height: 546px;
+      height: 540px;
+    }
+    .section__content {
+      min-height: 600px;
     }
   }
   @include respond-to($screen-md) {
+    .section__content {
+      min-height: 517px;
+    }
+  }
+  @include respond-to($md) {
+    .section__content {
+      padding-left: 55%;
+      min-height: 460px;
+    }
     .mouse-parallax__content {
-      height: 517px;
+      height: 460px;
     }
   }
   @include respond-to($sm) {
-    .mouse-parallax__content {
-      height: 430px;
+    padding-bottom: 5%;
+    .section__content {
+      min-height: 430px;
     }
-  }
-  @include respond-to($xs){
     .signature {
       display: none;
+    }
+  }
+  @include respond-to($xs) {
+    padding-top: 100px;
+
+    .section__content {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .section__thumb {
+      position: relative;
+      width: 100%;
+      margin: 0 auto;
+    }
+    .mouse-parallax{
+      margin-bottom: 30px;
+    }
+    .mouse-parallax__content{
+      max-height: 100%;
+      .mouse-parallax__img{
+        top: 0;
+      }
     }
   }
 }
