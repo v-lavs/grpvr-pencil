@@ -1879,6 +1879,7 @@ body {
 }
 
 .section-video .wrap-video {
+  position: relative;
   display: block;
   max-width: 804px;
   width: 85%;
