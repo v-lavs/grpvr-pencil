@@ -710,6 +710,7 @@ body {
   right: 0;
   top: 0;
   width: 48vw;
+  max-width: 920px;
   z-index: 1;
 }
 
@@ -770,6 +771,7 @@ body {
   top: 0;
   position: absolute;
   width: 50vw;
+  max-width: 930px;
   display: flex;
   justify-content: flex-end;
 }
@@ -1131,6 +1133,7 @@ body {
 }
 
 .section-stages {
+  position: relative;
   padding-top: 8.5%;
   padding-bottom: 93px;
   color: #fff;
@@ -1154,6 +1157,7 @@ body {
 }
 
 .section-stages .slider-stages {
+  position: relative;
   background-image: linear-gradient(to right, #ffa100, #ff6500);
   overflow: hidden;
 }
@@ -2976,6 +2980,10 @@ body {
 }
 
 @media only screen and (max-width: 840px) {
+  .container {
+    max-width: 640px;
+  }
+
   .swiper-button-next,
   .swiper-button-prev {
     display: block;
@@ -3113,10 +3121,12 @@ body {
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 50px;
+    transform: translateX(calc((100vw - 100%) / 2.5));
+    margin-bottom: 30px;
   }
 
   .section-about .wrap-img {
+    padding: 0;
     margin-right: -15px;
   }
 
@@ -3134,6 +3144,7 @@ body {
     position: relative;
     width: 100%;
     margin: 0 auto;
+    left: 0;
   }
 
   .section-manifestations .mouse-parallax {
@@ -3141,11 +3152,13 @@ body {
   }
 
   .section-manifestations .mouse-parallax__content {
+    height: auto;
     max-height: 100%;
   }
 
   .section-manifestations .mouse-parallax__content .mouse-parallax__img {
     top: 0;
+    position: relative;
   }
 
   .section-reasons .section__bg-reasons {
@@ -3157,6 +3170,29 @@ body {
     max-width: 610px;
     margin: 0 auto;
     padding-top: 30px;
+  }
+
+  .section-stages .slider-stages__part-bg:before {
+    display: none;
+  }
+
+  .section-stages .swiper-button-next,
+  .section-stages .swiper-button-prev {
+    display: none;
+  }
+
+  .section-stages .image-slider {
+    background-position: top 50px center;
+    background-size: 50vw 50vw;
+  }
+
+  .section-stages .image-slider__circle {
+    padding-top: 0;
+    margin-top: 50px;
+    max-width: none;
+    max-height: none;
+    width: 50vw;
+    height: 50vw;
   }
 
   .section-stages .section__header {
@@ -3185,13 +3221,83 @@ body {
     height: 40px;
   }
 
+  .section-stages .slider-stages__part {
+    width: 100%;
+  }
+
+  .section-stages .desktop-hidden {
+    display: block !important;
+  }
+
   .section-stages .slider-stages__content {
     padding: 20px;
   }
 
+  .section-stages .slider-stages__content .slider-content__text-wrap {
+    display: none;
+  }
+
+  .section-stages .container {
+    padding: 0;
+    max-width: none;
+  }
+
   .section-stages .slider-content__text-wrap {
-    padding: 40px;
+    position: static;
+    padding: 20px;
     font-size: 19px;
+    background: none;
+    box-shadow: none;
+    min-height: 0;
+    margin: 60px auto 0;
+    max-width: 50vw;
+  }
+
+  .section-stages .slider-stage__pagination-item {
+    min-height: 0;
+    width: auto;
+    padding: 10px;
+    flex-grow: 0;
+  }
+
+  .section-stages .slider-stage__pagination-item:after {
+    display: none;
+  }
+
+  .section-stages .slider-stage__pagination {
+    background: transparent;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: calc(50vw + 75px);
+    max-width: 480px;
+    z-index: 1;
+  }
+
+  .section-stages .active .slider-stage__pagination-link {
+    background-color: #fff;
+  }
+
+  .section-stages .slider-stage__pagination-link {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    overflow: hidden;
+    text-indent: -999em;
+  }
+
+  .section-stages .swiper-slide-active .days-label {
+    right: -50px;
+    opacity: 1;
+  }
+
+  .section-stages .days-label {
+    opacity: 0;
+    right: 20px;
+    top: 30px;
+    transition: opacity .75s, right 1s;
   }
 
   .section-advantages .swiper-wrapper {
@@ -3241,6 +3347,10 @@ body {
 
   .burger .line:last-child {
     margin-bottom: 0;
+  }
+
+  .header .container {
+    max-width: none;
   }
 }
 
@@ -3296,42 +3406,6 @@ body {
 
   .section-banner .left-part {
     min-height: 384px;
-  }
-
-  .section-stages .slider-stages__part {
-    width: 80%;
-    max-width: 580px;
-    margin: 0 auto;
-  }
-
-  .section-stages .slider-stages {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-
-  .section-stages .slider-stage__progress,
-  .section-stages .slider-stage__pagination,
-  .section-stages .slider-stages__part-bg:before {
-    display: none;
-  }
-
-  .section-stages .slider-content__text-wrap {
-    background: transparent;
-    box-shadow: none;
-  }
-
-  .section-stages .slider-content__title {
-    position: relative;
-    padding-top: 20px;
-    padding-left: 107px;
-    margin-bottom: 40px;
-  }
-
-  .section-stages .slider-content__title .icon {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
   }
 
   .section-advantages .swiper-slide.advantages-list__item {

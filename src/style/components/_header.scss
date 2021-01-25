@@ -88,6 +88,12 @@
       }
     }
   }
+  @include respond-to($xs) {
+    .container {
+      max-width: none;
+    }
+  }
+
   @include respond-to($xxs) {
   .container{
     padding-top: 12px;

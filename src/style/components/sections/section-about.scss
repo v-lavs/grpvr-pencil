@@ -19,7 +19,6 @@
 
     &__content {
       padding-right: 50%;
-
     }
 
     &__text {
@@ -31,6 +30,7 @@
       right: 0;
       top: 0;
       width: 48vw;
+      max-width: 920px;
       z-index: 1;
     }
   }
@@ -46,7 +46,6 @@
 
   .bg_primary {
     max-width: 657px;
-
   }
 
   .img-anim-1 {
@@ -83,9 +82,9 @@
     }
   }
 
-  @include respond-to($lg){
+  @include respond-to($lg) {
     padding-top: 40px;
-    .wrap-img{
+    .wrap-img {
       padding-left: 10%;
     }
   }
@@ -134,10 +133,12 @@
       width: 100%;
       display: flex;
       justify-content: flex-end;
-      margin-bottom: 50px;
+      transform: translateX(calc((100vw - 100%) / 2.5));
+      margin-bottom: 30px;
     }
 
     .wrap-img {
+      padding: 0;
       margin-right: -15px;
     }
   }

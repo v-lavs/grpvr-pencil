@@ -8,9 +8,9 @@
       top: 0;
       position: absolute;
       width: 50vw;
+      max-width: 930px;
       display: flex;
       justify-content: flex-end;
-
     }
 
     &__content {
@@ -120,14 +120,17 @@
       position: relative;
       width: 100%;
       margin: 0 auto;
+      left: 0;
     }
     .mouse-parallax{
       margin-bottom: 30px;
     }
     .mouse-parallax__content{
+      height: auto;
       max-height: 100%;
       .mouse-parallax__img{
         top: 0;
+        position: relative;
       }
     }
   }
