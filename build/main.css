@@ -1142,7 +1142,7 @@ body {
 
 .section-stages .section__header {
   margin: 0 auto;
-  max-width: 33%;
+  width: 33%;
 }
 
 .section-stages .anim-in {
@@ -2950,6 +2950,29 @@ body {
     max-width: 480px;
     margin-left: -10%;
   }
+
+  .section-stages .days-label {
+    width: 142px;
+    height: 107px;
+    font-size: 26px;
+    transform-origin: 50% 50%;
+    transform: rotate(-158deg);
+  }
+
+  .section-stages .days-label .day {
+    width: 50%;
+    transform-origin: 50% 50%;
+    transform: rotate(158deg);
+    padding-top: 23px;
+  }
+
+  .section-stages .days-label .day small {
+    font-size: 9px;
+  }
+
+  .section-stages .slider-stages__content {
+    padding: 40px 5% 40px 7%;
+  }
 }
 
 @media only screen and (max-width: 840px) {
@@ -3136,6 +3159,41 @@ body {
     padding-top: 30px;
   }
 
+  .section-stages .section__header {
+    width: 50%;
+  }
+
+  .section-stages .slider-stage__pagination-item {
+    padding: 10px 0;
+    min-height: 70px;
+  }
+
+  .section-stages .slider-stage__pagination-item.active {
+    font-size: 12px;
+  }
+
+  .section-stages .slider-stage__pagination {
+    font-size: 10px;
+  }
+
+  .section-stages .slider-content__title {
+    font-size: 20px;
+  }
+
+  .section-stages .slider-content__title .icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .section-stages .slider-stages__content {
+    padding: 20px;
+  }
+
+  .section-stages .slider-content__text-wrap {
+    padding: 40px;
+    font-size: 19px;
+  }
+
   .section-advantages .swiper-wrapper {
     flex-wrap: nowrap;
   }
@@ -3238,6 +3296,42 @@ body {
 
   .section-banner .left-part {
     min-height: 384px;
+  }
+
+  .section-stages .slider-stages__part {
+    width: 80%;
+    max-width: 580px;
+    margin: 0 auto;
+  }
+
+  .section-stages .slider-stages {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .section-stages .slider-stage__progress,
+  .section-stages .slider-stage__pagination,
+  .section-stages .slider-stages__part-bg:before {
+    display: none;
+  }
+
+  .section-stages .slider-content__text-wrap {
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .section-stages .slider-content__title {
+    position: relative;
+    padding-top: 20px;
+    padding-left: 107px;
+    margin-bottom: 40px;
+  }
+
+  .section-stages .slider-content__title .icon {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .section-advantages .swiper-slide.advantages-list__item {
