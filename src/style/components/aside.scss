@@ -1,6 +1,7 @@
 .aside {
   padding-top: 105px;
   padding-bottom: 60px;
+
   .banner__content {
     position: relative;
     max-width: 530px;
@@ -8,6 +9,10 @@
     text-align: center;
     font-size: 36px;
     font-weight: 600;
+
+    .text_middle {
+      font-size: 36px;
+    }
 
     .lava-lamp {
       max-width: 328px;
@@ -20,22 +25,39 @@
       width: 80%;
       padding-top: 67px;
       margin: 0 auto 20px;
-      .text_middle{
-        font-size: 36px;
-      }
     }
   }
 
+  @include respond-to($sm) {
+    padding-bottom: 130px;
+    .banner__content {
+      max-width: 410px;
+      width: 50%;
+      font-size: 23px;
 
+      .text_middle {
+        font-size: 27px;
+      }
+
+      .lava-lamp {
+
+      }
+
+
+    }
+
+  }
   @include respond-to($xs) {
-    .banner__content{
+    .banner__content {
       max-width: 320px;
     }
   }
-
   @include respond-to($xxs) {
     .banner__content {
       max-width: 245px;
     }
   }
+}
+.aside_mob{
+  display: none;
 }

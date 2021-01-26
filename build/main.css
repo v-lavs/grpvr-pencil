@@ -1973,6 +1973,10 @@ body {
   font-weight: 600;
 }
 
+.aside .banner__content .text_middle {
+  font-size: 36px;
+}
+
 .aside .banner__content .lava-lamp {
   max-width: 328px;
   height: 328px;
@@ -1986,8 +1990,8 @@ body {
   margin: 0 auto 20px;
 }
 
-.aside .banner__content .banner__wrap-img .text_middle {
-  font-size: 36px;
+.aside_mob {
+  display: none;
 }
 
 .banner__content {
@@ -2823,6 +2827,15 @@ body {
     left: 24px;
   }
 
+  .section-advantages:after {
+    height: 920px;
+  }
+
+  .section-advantages:before {
+    height: 920px;
+    left: -5px;
+  }
+
   .section-advantages .section__thumb {
     padding-left: 0;
     padding-right: 10px;
@@ -2842,6 +2855,14 @@ body {
 
   .header .header__logo .logo-mob {
     display: block;
+  }
+
+  .footnote {
+    font-size: 9px;
+  }
+
+  .footer .top-row {
+    font-size: 18px;
   }
 }
 
@@ -3138,6 +3159,10 @@ body {
     font-size: 16px;
   }
 
+  .section-advantages {
+    padding-bottom: 0;
+  }
+
   .section-advantages .advantages-list__text {
     padding-left: 20px;
     padding-right: 20px;
@@ -3145,6 +3170,20 @@ body {
 
   .section-advantages .advantages-list__item {
     width: 42%;
+  }
+
+  .aside {
+    padding-bottom: 130px;
+  }
+
+  .aside .banner__content {
+    max-width: 410px;
+    width: 50%;
+    font-size: 23px;
+  }
+
+  .aside .banner__content .text_middle {
+    font-size: 27px;
   }
 }
 
@@ -3789,6 +3828,15 @@ body {
     padding: 30px 0 0 20px;
   }
 
+  .section-prevention {
+    background-image: none;
+  }
+
+  .section-prevention .section-prevention {
+    background-position: left 140% top 30%;
+    background-size: 150vw;
+  }
+
   .section-prevention .right-part {
     width: 90%;
     margin: 40px 0;
@@ -3802,6 +3850,10 @@ body {
 
   .section-prevention .section__blob-effect {
     transform: translateX(-57vw);
+  }
+
+  .section-prevention .section__header {
+    margin-bottom: 70px;
   }
 
   .section-prevention .how-prevent {
@@ -3890,6 +3942,26 @@ body {
 
   .header .main-logo {
     max-width: 61px;
+  }
+
+  .footnote {
+    font-size: 7px;
+  }
+
+  .footer .social-list {
+    margin-right: auto;
+  }
+
+  .footer .created-by {
+    font-size: 9px;
+  }
+
+  .footer .top-row {
+    font-size: 10px;
+  }
+
+  .footer .top-row .footer-logo {
+    max-width: 50px;
   }
 }
 

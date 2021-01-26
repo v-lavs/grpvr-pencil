@@ -186,6 +186,11 @@
   }
 
   @include respond-to($xxs) {
+    .section-prevention {
+      background-position: left 140% top 30%;
+      background-size: 150vw;
+    }
+    background-image: none;
     .right-part {
       width: 90%;
       margin: 40px 0;
@@ -197,6 +202,9 @@
     }
     .section__blob-effect {
       transform: translateX(-57vw);
+    }
+    .section__header{
+      margin-bottom: 70px;
     }
     .how-prevent {
       padding-left: 20px;

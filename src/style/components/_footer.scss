@@ -4,13 +4,15 @@
   font-size: 20px;
   font-weight: 500;
   color: #000000;
-.created-by{
-  color: #a4a1a1;
-  font-size: 15px;
-  font-family: "Harabara", sans-serif;
-  margin-bottom: 5px;
-  margin-right: 6px;
-}
+
+  .created-by {
+    color: #a4a1a1;
+    font-size: 15px;
+    font-family: "Harabara", sans-serif;
+    margin-bottom: 5px;
+    margin-right: 6px;
+  }
+
   .top-row {
     padding-bottom: 16.5vh;
     padding-top: 28px;
@@ -65,9 +67,11 @@
       transition: .35s;
       width: 18px;
       height: 17px;
-      .icon{
+
+      .icon {
         width: inherit;
       }
+
       &:hover,
       &:focus {
         .icon {
@@ -106,5 +110,36 @@
 .note-list {
   width: 90%;
   margin: 0 auto 25px;
+}
+
+@include respond-to($md) {
+  .footnote {
+    font-size: 9px;
+  }
+  .footer .top-row {
+    font-size: 18px;
+  }
+}
+
+@include respond-to($xxs) {
+  .footnote {
+    font-size: 7px;
+  }
+  .footer {
+    .social-list {
+      margin-right: auto;
+    }
+
+    .created-by {
+      font-size: 9px;
+    }
+
+    .top-row {
+      font-size: 10px;
+      .footer-logo {
+        max-width: 50px;
+      }
+    }
+  }
 }
 

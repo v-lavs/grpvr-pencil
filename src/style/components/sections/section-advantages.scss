@@ -166,12 +166,20 @@
 
   }
   @include respond-to($md) {
+    &:after{
+      height: 920px;
+    }
+    &:before{
+      height: 920px;
+      left: -5px;
+    }
     .section__thumb {
       padding-left: 0;
       padding-right: 10px;
     }
   }
   @include respond-to($sm) {
+    padding-bottom: 0;
     .advantages-list__text {
       padding-left: 20px;
       padding-right: 20px;
