@@ -150,6 +150,7 @@
     }
   }
   @include respond-to($xs) {
+
     .swiper-wrapper {
       flex-wrap: nowrap;
     }
@@ -183,6 +184,7 @@
     }
   }
   @include respond-to($xxs){
+    background-image: linear-gradient(to top, #dde6eb, rgba(221, 230, 235, 0.1), rgba(221, 230, 235, 0));
     padding-top: 118px;
     .swiper-slide.advantages-list__item {
       width: 80%;
