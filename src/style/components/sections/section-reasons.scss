@@ -594,6 +594,10 @@
       max-width: 480px;
       margin-left: -10%;
     }
+    .section__header{
+      max-width: 550px;
+      margin: 0 auto;
+    }
   }
 
   @include respond-to($xs) {
@@ -605,6 +609,15 @@
       max-width: 610px;
       margin: 0 auto;
       padding-top: 30px;
+    }
+    .round_big {
+      max-width: 315px;
+      width: 100%;
+    }
+  }
+  @include respond-to($xxs) {
+    .section__title{
+      margin-bottom: 5px;
     }
   }
 }

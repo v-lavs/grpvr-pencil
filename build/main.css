@@ -202,6 +202,10 @@ body {
   line-height: 1;
 }
 
+.section__title sup {
+  line-height: 0;
+}
+
 .section__sub-title {
   font-size: 18px;
   line-height: 1.13;
@@ -481,7 +485,7 @@ body {
   background-image: linear-gradient(to right, #fe5800, #ffa100);
   border-radius: 5px;
   text-align: center;
-  padding: 10px 10px 12px;
+  padding: 10px 5px;
   line-height: .9;
 }
 
@@ -1145,7 +1149,7 @@ body {
 
 .section-stages .section__header {
   margin: 0 auto;
-  width: 33%;
+  max-width: 590px;
 }
 
 .section-stages .anim-in {
@@ -1428,12 +1432,13 @@ body {
   height: 824px;
   z-index: 2;
   width: 58vw;
+  max-width: 920px;
 }
 
 .section-prevention .section__blob-effect {
   position: relative;
-  width: 58vw;
-  height: 824px;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -1533,7 +1538,7 @@ body {
 .section-prevention .mouse-parallax__content {
   background-repeat: no-repeat;
   background-position: center;
-  background-size: auto;
+  background-size: 50%;
   height: 100%;
 }
 
@@ -2716,6 +2721,25 @@ body {
     height: 460px;
   }
 
+  .section-prevention .how-prevent {
+    padding-left: 75px;
+  }
+
+  .section-prevention .how-prevent__item {
+    font-size: 18px;
+    padding-left: 80px;
+  }
+
+  .section-prevention .how-prevent__text {
+    padding-left: 20px;
+  }
+
+  .section-prevention .how-prevent__bg-icon {
+    width: 55px;
+    height: 55px;
+    left: 24px;
+  }
+
   .section-advantages .section__thumb {
     display: none;
   }
@@ -2956,6 +2980,11 @@ body {
     margin-left: -10%;
   }
 
+  .section-reasons .section__header {
+    max-width: 550px;
+    margin: 0 auto;
+  }
+
   .section-stages .days-label {
     width: 142px;
     height: 107px;
@@ -2978,9 +3007,33 @@ body {
   .section-stages .slider-stages__content {
     padding: 40px 5% 40px 7%;
   }
+
+  .section-prevention {
+    background-position: right 100% top 30%;
+    background-size: contain;
+  }
+
+  .section-prevention .right-part {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 400px;
+  }
+
+  .section-prevention .section__content {
+    padding-right: 0;
+  }
 }
 
 @media only screen and (max-width: 840px) {
+  .main__bg {
+    background-image: linear-gradient(to top, rgba(221, 230, 235, 0) 80%, #dde6eb);
+  }
+
+  .main__bg:before {
+    display: none;
+  }
+
   .container {
     max-width: 640px;
   }
@@ -3173,6 +3226,17 @@ body {
     padding-top: 30px;
   }
 
+  .section-reasons .round_big {
+    max-width: 315px;
+    width: 100%;
+  }
+
+  .section-stages {
+    background-image: radial-gradient(#ffffff, #dce6ea);
+    padding-top: 70px;
+    padding-bottom: 0;
+  }
+
   .section-stages .slider-stages__part-bg:before {
     display: none;
   }
@@ -3196,10 +3260,6 @@ body {
     height: 50vw;
   }
 
-  .section-stages .section__header {
-    width: 50%;
-  }
-
   .section-stages .slider-stage__pagination-item {
     padding: 10px 0;
     min-height: 70px;
@@ -3215,11 +3275,19 @@ body {
 
   .section-stages .slider-content__title {
     font-size: 20px;
+    padding-left: 57px;
+    position: relative;
+    margin-bottom: 25px;
+    text-align: left;
   }
 
   .section-stages .slider-content__title .icon {
+    position: absolute;
     width: 40px;
     height: 40px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .section-stages .slider-stages__part {
@@ -3249,6 +3317,7 @@ body {
     font-size: 19px;
     background: none;
     box-shadow: none;
+    text-align: center;
     min-height: 0;
     margin: 60px auto 0;
     max-width: 50vw;
@@ -3299,6 +3368,10 @@ body {
     right: 20px;
     top: 30px;
     transition: opacity .75s, right 1s;
+  }
+
+  .section-prevention .right-part {
+    height: 50vw;
   }
 
   .section-advantages .swiper-wrapper {
@@ -3367,7 +3440,7 @@ body {
 
   .section__title {
     font-size: 18px;
-    margin-bottom: 17px;
+    margin-bottom: 5px;
   }
 
   .section__sub-title {
@@ -3407,6 +3480,78 @@ body {
 
   .section-banner .left-part {
     min-height: 384px;
+  }
+
+  .section-reasons .section__title {
+    margin-bottom: 5px;
+  }
+
+  .section-stages .image-slider__circle {
+    width: 300px;
+    height: 300px;
+  }
+
+  .section-stages .slider-content__text-wrap {
+    max-width: 320px;
+    width: 100%;
+  }
+
+  .section-stages .image-slider {
+    background-size: 300px 300px;
+  }
+
+  .section-stages .slider-stage__pagination {
+    max-width: 95%;
+    top: calc(50% + 35px);
+  }
+
+  .section-stages .slider-stage__progress .slider-stage__handle {
+    width: 45px;
+    height: 12px;
+  }
+
+  .section-stages .slider-stage__progress .slider-stage__progress-track {
+    height: 4px;
+  }
+
+  .section-stages .days-label {
+    right: -44px;
+    padding: 10px 0;
+    width: 120px;
+    height: 77px;
+    top: 0;
+  }
+
+  .section-stages .days-label .day {
+    padding: 30px 0 0 20px;
+  }
+
+  .section-prevention .how-prevent {
+    padding-left: 20px;
+  }
+
+  .section-prevention .how-prevent__item {
+    padding-left: 34px;
+    font-size: 15px;
+  }
+
+  .section-prevention .how-prevent__item:before,
+  .section-prevention .how-prevent__item:after {
+    display: none;
+  }
+
+  .section-prevention .how-prevent__bg-icon {
+    width: 46px;
+    height: 46px;
+    left: 0;
+  }
+
+  .section-prevention .how-prevent__text {
+    padding-left: 27px;
+  }
+
+  .section-prevention .how-prevent__text span {
+    font-size: 13px;
   }
 
   .section-advantages .swiper-slide.advantages-list__item {
