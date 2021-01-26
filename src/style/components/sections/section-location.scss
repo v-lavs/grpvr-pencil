@@ -49,4 +49,8 @@
   .swiper-button-prev {
     transform: rotate(180deg) translate(20px, -10px);
   }
+
+  @include respond-to($xs){
+    width: 100%;
+  }
 }

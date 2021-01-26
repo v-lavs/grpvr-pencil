@@ -3196,6 +3196,15 @@ body {
     display: none;
   }
 
+  .wrap-sections {
+    flex-wrap: wrap;
+  }
+
+  .wrap-sections .aside_mob {
+    display: block;
+    width: 100%;
+  }
+
   .container {
     max-width: 640px;
   }
@@ -3700,6 +3709,14 @@ body {
     display: none;
   }
 
+  .section-location {
+    width: 100%;
+  }
+
+  .section-video {
+    width: 100%;
+  }
+
   .aside .banner__content {
     max-width: 320px;
   }
@@ -3933,6 +3950,10 @@ body {
 
   .section-advantages .swiper-container {
     padding-left: 30px;
+  }
+
+  .section-video {
+    order: -1;
   }
 
   .section-video .wrap-video {

@@ -249,6 +249,14 @@ body {
       display: none;
     }
   }
+  .wrap-sections {
+    flex-wrap: wrap;
+    .aside_mob {
+      display: block;
+      width: 100%;
+    }
+  }
+
 }
 
 @include respond-to($xxs) {

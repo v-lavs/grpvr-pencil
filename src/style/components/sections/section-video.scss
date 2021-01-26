@@ -1,4 +1,4 @@
-.section-video{
+.section-video {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -7,35 +7,40 @@
   padding-bottom: 50px;
   padding-left: 40px;
   width: 55%;
-  .section__header{
+
+  .section__header {
     margin-bottom: 40px;
   }
-  .wrap-video{
+
+  .wrap-video {
     position: relative;
     display: block;
     max-width: 804px;
     width: 85%;
     margin-left: 30px;
   }
-  .poster{
+
+  .poster {
     object-fit: inherit;
     display: block;
     width: 100%;
     height: auto;
   }
-  .btn_video{
+
+  .btn_video {
     position: absolute;
     width: 80px;
     height: 80px;
     border: 5px solid $white;
-    background-color: rgba(255,255,255, .15);
+    background-color: rgba(255, 255, 255, .15);
     border-radius: 50%;
     z-index: 2;
     top: 50%;
     left: 50%;
     display: block;
     transform: translate(-50%, -50%);
-    &:before{
+
+    &:before {
       position: absolute;
       content: '';
       width: 0;
@@ -53,8 +58,12 @@
     }
   }
 
-  @include respond-to($xxs){
-    .wrap-video{
+  @include respond-to($xs) {
+    width: 100%;
+  }
+  @include respond-to($xxs) {
+    order: -1;
+    .wrap-video {
       width: 100%;
       margin-left: 0;
     }
