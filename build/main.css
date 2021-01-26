@@ -1550,7 +1550,7 @@ body {
 .section-use .section__content {
   position: relative;
   counter-reset: card;
-  padding: 15px 0 28px;
+  padding: 15px 5% 28px;
   background-image: linear-gradient(to right, #fea00b, #fb5406);
 }
 
@@ -1586,7 +1586,6 @@ body {
 
 .section-use .usage-step {
   max-width: 320px;
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1594,10 +1593,9 @@ body {
   padding: 28px 78px 24px 35px;
   background-color: #f3faff;
   line-height: 1;
-  flex-shrink: 0;
-  margin-left: 84px;
   border-radius: 7px;
   box-shadow: 0 0 21px #e16000;
+  height: auto;
 }
 
 .section-use .usage-step:before {
@@ -1628,6 +1626,10 @@ body {
   z-index: 1;
 }
 
+.section-use .usage-step:hover {
+  box-shadow: 0 0 21px #983900;
+}
+
 .section-use .usage-step__text {
   font-size: 24px;
   text-transform: uppercase;
@@ -1638,6 +1640,7 @@ body {
   color: #a4a7a9;
   font-size: 19px;
   text-transform: none;
+  display: inline-block;
 }
 
 .section-use .usage-step__footer {
@@ -1659,9 +1662,15 @@ body {
 }
 
 .section-use .swiper-container {
-  padding-top: 30px;
-  padding-bottom: 96px;
-  margin-left: 0;
+  padding: 30px 30px 96px;
+}
+
+.section-use .wrap-section-slider {
+  width: 80%;
+}
+
+.section-use .swiper-wrapper {
+  justify-content: space-around;
 }
 
 .section-use .text-signs {
@@ -1672,6 +1681,10 @@ body {
   font-size: 16px;
   font-weight: 500;
   color: #ffffff;
+}
+
+.section-use .swiper-pagination {
+  display: none;
 }
 
 .section-use .decor-thumb {
@@ -1718,7 +1731,7 @@ body {
   background-image: url(../assets/img/8.png);
   width: 21.5%;
   height: 705px;
-  left: 0;
+  left: -40px;
   bottom: 123px;
   background-position: right bottom;
 }
@@ -2505,6 +2518,42 @@ body {
     border-width: 2px;
   }
 
+  .section-use .section__thumb {
+    width: 26%;
+    height: 26vw;
+  }
+
+  .section-use .section__content {
+    padding-left: 2.5%;
+  }
+
+  .section-use .usage-step {
+    max-width: 270px;
+    padding-left: 18px;
+  }
+
+  .section-use .usage-step__footer {
+    font-size: 16px;
+  }
+
+  .section-use .usage-step__text {
+    font-size: 18px;
+  }
+
+  .section-use .usage-step__text .text_small {
+    font-size: 15px;
+  }
+
+  .section-use .bg-primary {
+    font-size: 16px;
+  }
+
+  .section-use .text-signs {
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+
   .header .main-logo {
     max-width: 110px;
   }
@@ -2546,6 +2595,17 @@ body {
   .section-stages .slider-stages__part-bg:before {
     width: 574px;
     height: 574px;
+  }
+
+  .section-use .section__thumb {
+    width: 16%;
+    height: 16vw;
+    top: 0;
+    right: -.5%;
+  }
+
+  .section-use .wrap-section-slider {
+    width: 100%;
   }
 }
 
@@ -3023,6 +3083,35 @@ body {
   .section-prevention .section__content {
     padding-right: 0;
   }
+
+  .section-use .section__thumb {
+    display: none;
+  }
+
+  .section-use .section__content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .section-use .usage-step {
+    padding: 29px 54px 20px 20px;
+    max-width: 30%;
+  }
+
+  .section-use .usage-step:after {
+    width: 36px;
+    height: 67px;
+    right: 15px;
+    top: 30px;
+  }
+
+  .section-use .usage-step:before {
+    right: 10px;
+  }
+
+  .section-use .bg-primary {
+    font-size: 16px;
+  }
 }
 
 @media only screen and (max-width: 840px) {
@@ -3104,10 +3193,11 @@ body {
   }
 
   .section-banner .banner__content {
-    max-width: 245px;
+    max-width: 320px;
     width: 100%;
     margin: 0 auto 46px;
     font-size: 17px;
+    text-align: center;
   }
 
   .section-banner .banner__content .lava-lamp {
@@ -3128,6 +3218,7 @@ body {
     padding-left: 0;
     margin-bottom: 15px;
     width: 50%;
+    text-align: left;
   }
 
   .section-banner .banner__wrap-img .img {
@@ -3374,6 +3465,77 @@ body {
     height: 50vw;
   }
 
+  .section-use .section__content {
+    padding: 0;
+  }
+
+  .section-use .section__header {
+    margin-bottom: 0;
+  }
+
+  .section-use .swiper-container {
+    padding: 20px;
+  }
+
+  .section-use .usage-step {
+    padding-left: 32px;
+    max-width: 320px;
+    width: 40%;
+  }
+
+  .section-use .usage-step__text {
+    color: #fc7117;
+  }
+
+  .section-use .usage-step__text .text_small {
+    padding-top: 13px;
+  }
+
+  .section-use .swiper-wrapper {
+    justify-content: flex-start;
+  }
+
+  .section-use .swiper-pagination {
+    display: block;
+    bottom: -8%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .section-use .swiper-pagination-bullet {
+    margin: 0 7px;
+  }
+
+  .section-use .wrap-section-slider {
+    padding-bottom: 26px;
+  }
+
+  .section-use .text-signs {
+    position: relative;
+    padding-left: 54px;
+    text-align: left;
+    margin: 0 auto;
+    top: 0;
+    width: 85%;
+    font-size: 13px;
+  }
+
+  .section-use .text-signs:before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 33px;
+    height: 31px;
+    background-image: url(../assets/img/13.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: 1;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
   .section-advantages .swiper-wrapper {
     flex-wrap: nowrap;
   }
@@ -3408,6 +3570,10 @@ body {
 
   .section-advantages .swiper-pagination {
     bottom: 5px;
+  }
+
+  .aside .banner__content {
+    max-width: 320px;
   }
 
   .burger {
@@ -3474,12 +3640,24 @@ body {
     margin-left: 0;
   }
 
+  .site-title {
+    font-size: 30px;
+  }
+
   .section-banner {
     padding-top: 60px;
   }
 
   .section-banner .left-part {
     min-height: 384px;
+  }
+
+  .section-banner .left-part .text_md {
+    font-size: 15px;
+  }
+
+  .section-banner .banner__content {
+    max-width: 245px;
   }
 
   .section-reasons .section__title {
@@ -3554,6 +3732,14 @@ body {
     font-size: 13px;
   }
 
+  .section-use .usage-step {
+    width: 100%;
+  }
+
+  .section-advantages {
+    padding-top: 118px;
+  }
+
   .section-advantages .swiper-slide.advantages-list__item {
     width: 80%;
   }
@@ -3561,6 +3747,10 @@ body {
   .section-video .wrap-video {
     width: 100%;
     margin-left: 0;
+  }
+
+  .aside .banner__content {
+    max-width: 245px;
   }
 
   .header .container {

@@ -28,7 +28,7 @@
     background-image: url(../assets/img/8.png);
     width: 21.5%;
     height: 705px;
-    left: 0;
+    left: -40px;
     bottom: 123px;
     background-position: right bottom;
   }
@@ -183,6 +183,7 @@
     }
   }
   @include respond-to($xxs){
+    padding-top: 118px;
     .swiper-slide.advantages-list__item {
       width: 80%;
     }

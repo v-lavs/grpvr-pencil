@@ -127,18 +127,20 @@ $(document).ready(function () {
             }
             if (!aboutGerpevirSlider) {
                 aboutGerpevirSlider = new Swiper('#aboutGerpevirSlider', {
-                    slidesPerView: 2,
                     spaceBetween: 30,
+                    slidesPerView: 'auto',
+                    visibilityFullFit: true,
+                    autoResize: false,
                     breakpoints: {
-                        840: {
-                            slidesPerView: 2,
-                        }, 540: {
-                            slidesPerView: 1,
-                        },
+                        320:{
+                            slidesPerView: 'auto',
+                            visibilityFullFit: true,
+                            autoResize: false,
+                        }
                     },
-                    navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
+                    pagination: {
+                        el: '.wrap-section-slider .swiper-pagination',
+                        clickable: true,
                     },
                 });
             }

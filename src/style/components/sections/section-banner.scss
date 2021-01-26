@@ -180,8 +180,8 @@
       padding-bottom: 50px;
 
     }
-      .left-part {
-        min-height: 440px;
+    .left-part {
+      min-height: 440px;
     }
   }
   @include respond-to($md) {
@@ -189,8 +189,8 @@
       font-size: 37px;
     }
   }
-  @include respond-to($sm){
-    .left-part{
+  @include respond-to($sm) {
+    .left-part {
       min-height: 376px;
     }
   }
@@ -211,7 +211,8 @@
       flex-wrap: wrap;
       padding-left: 40px;
       flex-direction: column-reverse;
-      &__main-img{
+
+      &__main-img {
         width: 85%;
       }
     }
@@ -250,10 +251,11 @@
       }
     }
     .banner__content {
-      max-width: 245px;
+      max-width: 320px;
       width: 100%;
       margin: 0 auto 46px;
       font-size: 17px;
+      text-align: center;
 
       .lava-lamp {
         width: 60%;
@@ -273,6 +275,7 @@
       padding-left: 0;
       margin-bottom: 15px;
       width: 50%;
+      text-align: left;
 
       .img {
         margin-right: 10px;
@@ -285,8 +288,13 @@
     padding-top: 60px;
     .left-part {
       min-height: 384px;
+      .text_md{
+        font-size: 15px;
+      }
     }
-
+    .banner__content {
+      max-width: 245px;
+    }
   }
   @media only screen and (max-width: 420px) {
     .banner {
