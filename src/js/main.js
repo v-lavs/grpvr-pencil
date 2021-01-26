@@ -147,7 +147,6 @@ $(document).ready(function () {
 
             if (!advantagesSlider) {
                 advantagesSlider = new Swiper('#advantagesSlider', {
-                    // slidesPerView: 2,
                     spaceBetween: 30,
                     slidesPerView: 'auto',
                     visibilityFullFit: true,

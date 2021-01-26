@@ -128,6 +128,9 @@
     }
   }
 
+  .swiper-container{
+    padding-top: 15px;
+  }
 
   .swiper-button-next,
   .swiper-button-prev {
@@ -219,7 +222,7 @@
     .main-nav {
       position: relative;
       padding-top: 0;
-      margin: -23px auto 32px auto;
+      margin: -33px auto 32px auto;
       z-index: 2;
       font-size: 11px;
       max-width: 325px;
