@@ -190,14 +190,16 @@
   }
 
   @include respond-to($xs) {
-    background-image: linear-gradient(to top, #dde6eb, rgba(221, 230, 235, 0.1), rgba(221, 230, 235, 0));
+    background-image: none;
     padding-top: 118px;
+    &:before,
+    &:after{
+      display: none;
+    }
     .section__header {
       margin-bottom: 20px;
-
       width: 100%;
     }
-
     .section__thumb {
       display: none;
     }
@@ -240,7 +242,6 @@
         height: auto;
         max-width: 280px;
         margin-right: 0;
-        //width: 60%;
         width: 80%;
 
 
@@ -254,6 +255,9 @@
       &__text {
         height: 100%;
       }
+    }
+    .aside_desktop{
+      display: none;
     }
   }
   @include respond-to($xxs) {

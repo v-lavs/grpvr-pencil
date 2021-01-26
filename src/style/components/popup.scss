@@ -39,4 +39,10 @@
     width: 100%;
     height: auto;
   }
+  @include respond-to($xs){
+    width: 90%;
+  }
+  @include respond-to($xxs){
+    width: 100%;
+  }
 }

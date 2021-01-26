@@ -48,6 +48,7 @@
 
   }
   @include respond-to($xs) {
+
     .banner__content {
       max-width: 320px;
     }

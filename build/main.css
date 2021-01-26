@@ -3623,8 +3623,13 @@ body {
   }
 
   .section-advantages {
-    background-image: linear-gradient(to top, #dde6eb, rgba(221, 230, 235, 0.1), rgba(221, 230, 235, 0));
+    background-image: none;
     padding-top: 118px;
+  }
+
+  .section-advantages:before,
+  .section-advantages:after {
+    display: none;
   }
 
   .section-advantages .section__header {
@@ -3691,6 +3696,10 @@ body {
     height: 100%;
   }
 
+  .section-advantages .aside_desktop {
+    display: none;
+  }
+
   .aside .banner__content {
     max-width: 320px;
   }
@@ -3710,6 +3719,10 @@ body {
 
   .header .container {
     max-width: none;
+  }
+
+  .popup {
+    width: 90%;
   }
 }
 
@@ -3962,6 +3975,10 @@ body {
 
   .footer .top-row .footer-logo {
     max-width: 50px;
+  }
+
+  .popup {
+    width: 100%;
   }
 }
 
