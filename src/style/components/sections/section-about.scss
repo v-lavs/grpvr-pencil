@@ -99,6 +99,7 @@
       display: none;
     }
   }
+
   @include respond-to($xs) {
     padding-top: 0;
     .mob-hide {
@@ -107,6 +108,10 @@
       padding: 0;
       margin: -1px;
       overflow: hidden;
+    }
+    .section__thumb {
+      width: 118%;
+      transform: translateX(-20px);
     }
     .open-up {
       display: inline-block;
@@ -140,6 +145,13 @@
     .wrap-img {
       padding: 0;
       margin-right: -15px;
+    }
+  }
+
+  @include respond-to($xxs) {
+    .section__thumb {
+      width: 118%;
+      transform: translateX(-20px);
     }
   }
 }

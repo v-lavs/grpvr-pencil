@@ -181,9 +181,23 @@
   @include respond-to($xs) {
     .right-part {
       height: 50vw;
+      width: 75vw;
     }
   }
+
   @include respond-to($xxs) {
+    .right-part {
+      width: 90%;
+      margin: 40px 0;
+    }
+    .mouse-parallax__content {
+      position: relative;
+      left: -16vw;
+      background-size: 93%;
+    }
+    .section__blob-effect {
+      transform: translateX(-57vw);
+    }
     .how-prevent {
       padding-left: 20px;
 

@@ -80,6 +80,9 @@
   @include respond-to($md) {
     .header__logo {
       margin-left: 0;
+      .container {
+        align-items: flex-end;
+      }
       .img-logo{
         display: none;
       }

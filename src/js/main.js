@@ -201,7 +201,7 @@ $(document).ready(function () {
         const x = e.clientX / $(window).width();
         const y = e.clientY / $(window).height();
         const $activeSection = $(e.currentTarget);
-        console.log($activeSection);
+
         $activeSection.find('.mouse-parallax__bg').css(
             'transform',
             'translate(-' + x * 50 + 'px, -' + y * 40 + 'px)'
