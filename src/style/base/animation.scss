@@ -81,3 +81,19 @@
     opacity: 1
   }
 }
+
+line-box {
+  top:10px;
+  left: 10px;
+  overflow: hidden;
+  position: absolute;
+  display: block
+}
+
+.line-box svg {
+  position: relative;
+  top: -24px;
+}
+
+
+
