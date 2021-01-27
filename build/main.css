@@ -2027,7 +2027,7 @@ body {
   text-align: center;
   font-size: 36px;
   font-weight: 600;
-  transition: .35s;
+  transition: .5s;
 }
 
 .aside .banner__content .text_middle {
@@ -4121,6 +4121,7 @@ body {
 
   .section-video .aside_mob .banner__content .lava-lamp {
     height: 141px;
+    width: 140px;
   }
 
   .section-video .aside_mob .banner__content .text_middle {
