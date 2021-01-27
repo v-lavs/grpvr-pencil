@@ -146,6 +146,11 @@ body {
   z-index: 100;
 }
 
+.wrap-sections{
+  .aside_mob{
+    display: none;
+  }
+}
 
 .backdrop {
   display: none;
@@ -288,15 +293,6 @@ body {
       width: 37px;
       height: 38px;
     }
-  }
-  .footnote {
-    font-size: 7px;
-    text-align: left;
-    padding-left: 26px;
-    padding-right: 15px;
-  }
-  .note-list {
-    margin-left: 0;
   }
   .site-title {
     font-size: 30px;

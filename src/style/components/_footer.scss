@@ -124,7 +124,14 @@
 @include respond-to($xxs) {
   .footnote {
     font-size: 7px;
+    text-align: left;
+    padding-left: 26px;
+    padding-right: 15px;
   }
+  .note-list {
+    margin-left: 0;
+  }
+
   .footer {
     .social-list {
       margin-right: auto;
