@@ -232,7 +232,6 @@
         margin-right: 0;
         width: 80%;
 
-
         &:before {
           width: 67px;
           height: 67px;
@@ -251,6 +250,7 @@
   @include respond-to($xxs) {
     padding-left: 0;
     padding-right: 0;
+    padding-bottom: 56px;
     .section__content {
       padding-left: 0;
       width: 100%;

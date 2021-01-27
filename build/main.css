@@ -3908,6 +3908,7 @@ body {
   .section-advantages {
     padding-left: 0;
     padding-right: 0;
+    padding-bottom: 56px;
   }
 
   .section-advantages .section__content {
