@@ -55,7 +55,7 @@
     &-track {
       background: linear-gradient(90deg, rgba(252, 160, 0, 1) 0%, rgba(246, 97, 9, 1) 100%);
       height: 12px;
-      width: 24%;
+      width: 0;
       transition: .45s;
     }
   }
@@ -63,7 +63,7 @@
   .slider-stage__handle {
     position: absolute;
     top: 50%;
-    left: 24%;
+    left: 0;
     transform: translate(-50%, -50%);
     width: 90px;
     height: 25px;

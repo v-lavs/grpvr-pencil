@@ -1,14 +1,17 @@
 
 
-//.slide-in-left.active {
-//  transform: translateX(-100%);
-//}
+.slide-in-left {
+  transform: translateX(-100%);
+  opacity: 9;
+  &.active {
+    animation: slideInLeft 1s ease-out .2s forwards;
+  }
+}
 
 @keyframes slideInLeft {
   0% {
     -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
-    visibility: visible
   }
   to {
     -webkit-transform: translateZ(0);
@@ -42,10 +45,6 @@
 
 .zoom-in {
   animation: zoomIn 1s ease-out .2s forwards;
-}
-
-.slide-in-left {
-  animation: slideInLeft 1s ease-out .2s forwards;
 }
 
 @-webkit-keyframes zoomInDown {
