@@ -54,18 +54,33 @@
       z-index: 2;
       display: block;
       margin-left: 4px;
-
     }
   }
 
   @include respond-to($xs) {
-    width: 100%;
-  }
-  @include respond-to($xxs) {
     order: -1;
-    .wrap-video {
+    width: 100%;
+    padding-left: 0;
+    .wrap-video{
       width: 100%;
       margin-left: 0;
     }
+   .btn_video{
+     width: 64px;
+     height: 64px;
+     border-width: 4px;
+     &:before{
+       border-width: 10px 0 10px 20px;
+     }
+   }
+  }
+  @include respond-to($xxs) {
+  .btn_video{
+    width: 50px;
+    height: 50px;
+    &:before{
+      border-width: 10px 0 10px 20px;
+    }
+  }
   }
 }
