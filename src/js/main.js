@@ -248,15 +248,47 @@ $(document).ready(function () {
         slidersInit();
     });
 
-//    ANIMATION
 
-    var slideInRight = new Waypoint({
-        element: document.getElementById('slideInRight'),
-        handler: function(direction) {
+    $('.reason-icon__list .reason-icon__item').click(function (e) {
+        e.preventDefault();
+        $(this).parent().find('.reason-icon__item').removeClass('active_icon');
+        $(this).addClass('active_icon');
+        var title = $(this).attr('data-title');
 
-        },
+        var result_block = $(this).parents('.round_big');
+        result_block.find('#reasonsResult').html(title);
 
     });
+
+
+    // SMOOTH SCROLL TO ANCHOR
+
+    function smoothScrollToAnchor(selector) {
+        $(selector).on('click', function (event) {
+            var anchor = $.attr(this, 'href');
+
+            if (anchor.match(/^#/) && anchor !== '#') {
+                event.preventDefault();
+
+                $('html, body').animate({
+                    scrollTop: $($.attr(this, 'href')).offset().top - 100
+                }, 2000);
+            }
+        });
+    }
+
+    smoothScrollToAnchor('#requestDemo');
+    smoothScrollToAnchor('.main-nav .main-nav__link');
+
+
+
+//    ANIMATION
+
+    // var slideInRight = new Waypoint({
+    //     element: document.getElementById('slideInRight'),
+    //     handler: function (direction) {
+    //     },
+    // });
     // var slideInRight = $('.slide-in-right').waypoint(function (direction) {
     //         $(this.element).addClass('active')
     //     }, {
@@ -267,6 +299,15 @@ $(document).ready(function () {
     // }, {
     //     offset: '80%'
     // });
+
+
+    let slideInRight = new Waypoint({
+        element: document.querySelector('.slide-in-right'),
+        handler: function (direction) {
+           element.classList.add('active');
+        },
+
+    });
 });
 
 
