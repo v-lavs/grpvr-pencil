@@ -2,7 +2,6 @@
  *To include js file from libraries write: `//= include ./path-to-file`
  * */
 //= include ../../node_modules/jquery/dist/jquery.js ;
-//= include ../lib/waypoints/index.js
 
 /**
  * CUSTOM SCRIPTS
@@ -251,17 +250,23 @@ $(document).ready(function () {
 
 //    ANIMATION
 
+    var slideInRight = new Waypoint({
+        element: document.getElementById('slideInRight'),
+        handler: function(direction) {
 
-    var slideInRight = $('.slide-in-right').waypoint(function (direction) {
-            $(this.element).addClass('active')
-        }, {
-            offset: '80%'
-        });
-    var slideInLeftt = $('.slide-in-left').waypoint(function (direction) {
-        $(this.element).addClass('active')
-    }, {
-        offset: '80%'
+        },
+
     });
+    // var slideInRight = $('.slide-in-right').waypoint(function (direction) {
+    //         $(this.element).addClass('active')
+    //     }, {
+    //         offset: '80%'
+    //     });
+    // var slideInLeftt = $('.slide-in-left').waypoint(function (direction) {
+    //     $(this.element).addClass('active')
+    // }, {
+    //     offset: '80%'
+    // });
 });
 
 

@@ -776,6 +776,7 @@ body {
 
 .section-about .wrap-img .img {
   width: 100%;
+  transition: transform .5s;
 }
 
 .section-about .wrap-img .img-anim-1 {
@@ -783,8 +784,8 @@ body {
   width: 38%;
   bottom: 15px;
   right: 0;
-  animation-delay: 1.2s;
-  animation-duration: .6s;
+  animation-delay: .6s;
+  transition: transform .35s;
 }
 
 .section-about .wrap-img .img-anim-2 {
@@ -792,7 +793,9 @@ body {
   top: 24px;
   right: 0;
   width: 21.6%;
-  animation-delay: .6s;
+  animation-delay: 1.2s;
+  animation-duration: .6s;
+  transition: transform .5s;
 }
 
 .section-about .text_primary-color {
@@ -1144,6 +1147,7 @@ body {
   padding-left: 80px;
   padding-right: 68px;
   position: relative;
+  transition: transform .5s;
 }
 
 .section-reasons .part-left:before {
@@ -2018,12 +2022,12 @@ body {
 }
 
 .aside .banner__content {
-  position: relative;
-  max-width: 530px;
+  width: 530px;
   margin: 0 auto;
   text-align: center;
   font-size: 36px;
   font-weight: 600;
+  transition: .35s;
 }
 
 .aside .banner__content .text_middle {
@@ -2031,7 +2035,7 @@ body {
 }
 
 .aside .banner__content .lava-lamp {
-  max-width: 328px;
+  width: 328px;
   height: 328px;
   left: 15%;
 }

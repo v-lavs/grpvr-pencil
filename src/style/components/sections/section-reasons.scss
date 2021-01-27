@@ -247,7 +247,7 @@
     padding-left: 80px;
     padding-right: 68px;
     position: relative;
-
+    transition: transform .5s;
     &:before {
       position: absolute;
       content: '';
