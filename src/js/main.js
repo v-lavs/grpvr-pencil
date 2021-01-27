@@ -257,6 +257,11 @@ $(document).ready(function () {
         }, {
             offset: '80%'
         });
+    var slideInLeftt = $('.slide-in-left').waypoint(function (direction) {
+        $(this.element).addClass('active')
+    }, {
+        offset: '80%'
+    });
 });
 
 

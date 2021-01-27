@@ -296,8 +296,12 @@ body {
   margin: 0 auto;
 }
 
-.slide-in-right {
+.slide-in-right.active {
   transform: translateX(100%);
+}
+
+.slide-in-left.active {
+  transform: translateX(-100%);
 }
 
 @keyframes slideInLeft {
@@ -313,7 +317,7 @@ body {
   }
 }
 
-@-webkit-keyframes slideInRight {
+@keyframes slideInRight {
   from {
     -webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0);
@@ -326,12 +330,12 @@ body {
   }
 }
 
-.animate__slideInRight {
-  animation-name: slideInRight;
-}
-
 .slide-in-right {
   animation: slideInRight .5s ease-out forwards;
+}
+
+.slide-in-left {
+  animation: slideInLeft 1s  ease-out .1s forwards;
 }
 
 .header__nav {
@@ -780,7 +784,7 @@ body {
   bottom: 15px;
   right: 0;
   animation-delay: 1.2s;
-  animation-duration: 1.2s;
+  animation-duration: .6s;
 }
 
 .section-about .wrap-img .img-anim-2 {
@@ -4112,7 +4116,6 @@ body {
   }
 
   .section-video .aside_mob .banner__content .lava-lamp {
-    max-width: 141px;
     height: 141px;
   }
 
