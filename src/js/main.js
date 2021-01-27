@@ -113,6 +113,9 @@ $(document).ready(function () {
         breakpoints: {
             540: {
                 spaceBetween: 40,
+            },
+            0: {
+                spaceBetween: 40,
             }
         }
     });
