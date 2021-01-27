@@ -32,6 +32,10 @@
       width: 48vw;
       max-width: 920px;
       z-index: 1;
+
+      img {
+        transform: translateX(100%);
+      }
     }
   }
 
@@ -42,7 +46,6 @@
 
     .img {
       width: 100%;
-      transition: transform .5s
     }
 
     .img-anim-1 {
@@ -50,8 +53,6 @@
       width: 38%;
       bottom: 15px;
       right: 0;
-      animation-delay: .6s;
-      transition: transform .35s
     }
 
     .img-anim-2 {
@@ -59,10 +60,23 @@
       top: 24px;
       right: 0;
       width: 21.6%;
-      animation-delay: 1.2s;
-      animation-duration: .6s;
-      transition: transform .5s
+    }
+  }
 
+  .active_anim {
+    .img {
+      transform: translateX(0);
+      transition: transform .65s linear
+    }
+
+    .img-anim-1 {
+      transform: translateX(0);
+      transition: .45s transform .5s linear;
+    }
+
+    .img-anim-2 {
+      transform: translateX(0);
+      transition: .25s transform .85s linear;
     }
   }
 

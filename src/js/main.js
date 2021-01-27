@@ -257,7 +257,6 @@ $(document).ready(function () {
 
         var result_block = $(this).parents('.round_big');
         result_block.find('#reasonsResult').html(title);
-
     });
 
 
@@ -289,6 +288,7 @@ $(document).ready(function () {
     //     handler: function (direction) {
     //     },
     // });
+
     // var slideInRight = $('.slide-in-right').waypoint(function (direction) {
     //         $(this.element).addClass('active')
     //     }, {
@@ -300,13 +300,13 @@ $(document).ready(function () {
     //     offset: '80%'
     // });
 
-
     let slideInRight = new Waypoint({
-        element: document.querySelector('.slide-in-right'),
+        element: document.querySelector('.section-about .section__thumb'),
         handler: function (direction) {
-           element.classList.add('active');
+           this.element.classList.add('active_anim');
+            console.log(this.element)
         },
-
+        offset: '70%'
     });
 });
 
