@@ -58,29 +58,101 @@
   }
 
   @include respond-to($xs) {
+
     order: -1;
     width: 100%;
     padding-left: 0;
-    .wrap-video{
+
+    .aside_mob {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      .banner__content {
+        max-width: 48%;
+
+        .lava-lamp {
+          max-width: 218px;
+          height: 218px;
+        }
+
+        .text_middle {
+          font-size: 19px;
+        }
+
+        .banner__wrap-day {
+          display: flex;
+          align-items: flex-end;
+          padding-left: 34px;
+          color: #ff8400;
+          margin-bottom: 15px;
+        }
+
+        .banner__wrap-img {
+          max-width: 148px;
+          margin-right: 13px;
+          margin-bottom: 0;
+        }
+
+        .banner__text {
+          font-size: 17px;
+        }
+      }
+    }
+    .wrap-video {
       width: 100%;
       margin-left: 0;
     }
-   .btn_video{
-     width: 64px;
-     height: 64px;
-     border-width: 4px;
-     &:before{
-       border-width: 10px 0 10px 20px;
-     }
-   }
-  }
-  @include respond-to($xxs) {
-  .btn_video{
-    width: 50px;
-    height: 50px;
-    &:before{
-      border-width: 10px 0 10px 20px;
+    .btn_video {
+      width: 64px;
+      height: 64px;
+      border-width: 4px;
+
+      &:before {
+        border-width: 10px 0 10px 20px;
+      }
     }
   }
+  @include respond-to($xxs) {
+    .btn_video {
+      width: 50px;
+      height: 50px;
+
+      &:before {
+        border-width: 10px 0 10px 20px;
+      }
+    }
+    .aside_mob {
+      .banner__content {
+        max-width: 220px;
+        width: 100%;
+        font-size: 15px;
+
+        .lava-lamp {
+          max-width: 141px;
+          height: 141px;
+        }
+
+        .text_middle {
+          font-size: 18px;
+        }
+
+        .banner__wrap-img {
+          width: 100%;
+          max-width: 100px;
+          margin-right: 8px;
+          padding-left: 0;
+          padding-top: 30px;
+        }
+
+        .banner__wrap-day {
+          padding-left: 23px;
+        }
+
+        .banner__text {
+          font-size: 15px;
+        }
+      }
+    }
   }
 }

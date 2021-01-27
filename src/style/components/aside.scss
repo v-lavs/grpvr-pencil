@@ -38,21 +38,11 @@
       .text_middle {
         font-size: 27px;
       }
-
-      .lava-lamp {
-
-      }
     }
   }
   @include respond-to($xs) {
-
-    .banner__content {
-      max-width: 320px;
-    }
-  }
-  @include respond-to($xxs) {
-    .banner__content {
-      max-width: 245px;
-    }
+    display: none;
   }
 }
+
+

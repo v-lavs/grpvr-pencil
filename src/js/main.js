@@ -110,6 +110,11 @@ $(document).ready(function () {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+        breakpoints: {
+            540: {
+                spaceBetween: 40,
+            }
+        }
     });
 
 
@@ -132,7 +137,7 @@ $(document).ready(function () {
                     visibilityFullFit: true,
                     autoResize: false,
                     breakpoints: {
-                        320:{
+                        320: {
                             slidesPerView: 'auto',
                             visibilityFullFit: true,
                             autoResize: false,
@@ -152,7 +157,7 @@ $(document).ready(function () {
                     visibilityFullFit: true,
                     autoResize: false,
                     breakpoints: {
-                        320:{
+                        320: {
                             slidesPerView: 'auto',
                             visibilityFullFit: true,
                             autoResize: false,

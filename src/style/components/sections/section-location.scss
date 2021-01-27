@@ -50,7 +50,68 @@
     transform: rotate(180deg) translate(20px, -10px);
   }
 
-  @include respond-to($xs){
+  @include respond-to($xs) {
     width: 100%;
+    padding-left: 0;
+    .section__header {
+      margin-bottom: 40px;
+    }
+    .btns-slider {
+      margin: 0 auto;
+    }
+    .btn-slide {
+      max-width: 180px;
+
+      .btn {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+
+    .wrap-map {
+      width: 80%;
+      padding-left: 0;
+      margin: 0 auto;
+    }
+  }
+  @include respond-to($xxs) {
+    padding-bottom: 25px;
+
+    .section__header {
+      margin-bottom: 20px;
+    }
+    .btns-slider {
+      max-width: 360px;
+      width: 100%;
+      margin: 0 auto;
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        width: 8px;
+        height: 14px;
+        margin-top: -17px;
+      }
+
+      .swiper-button-next {
+        left: 48%;
+      }
+
+      .swiper-button-prev {
+        left: 53%;
+      }
+    }
+    .btn-slide {
+      max-width: 157px;
+
+      .btn {
+        font-size: 15px;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+    }
+    .wrap-map {
+      width: 100%;
+    }
   }
 }
+

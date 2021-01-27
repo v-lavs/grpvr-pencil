@@ -146,8 +146,8 @@ body {
   z-index: 100;
 }
 
-.wrap-sections{
-  .aside_mob{
+.wrap-sections {
+  .aside_mob {
     display: none;
   }
 }
@@ -255,7 +255,14 @@ body {
     }
   }
   .wrap-sections {
-    flex-wrap: wrap;
+    background-image: url(../assets/img/bg-aside-mob.png);
+    background-repeat: no-repeat;
+    background-position: left top 30%;
+    background-size: contain;
+
+    .container {
+      flex-wrap: wrap;
+    }
 
     .section-location,
     .section-video {
@@ -266,7 +273,10 @@ body {
 }
 
 @include respond-to($xxs) {
-
+  .wrap-sections {
+    background-position: left 70% top 30%;
+    background-size: 120%;
+  }
   .section__title {
     font-size: 18px;
     margin-bottom: 5px;
@@ -290,6 +300,13 @@ body {
   }
   .site-title {
     font-size: 30px;
+  }
+}
+
+
+@media only screen and (max-width: 420px){
+  .wrap-sections{
+    background-size: 150%;
   }
 }
 
