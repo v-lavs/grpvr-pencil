@@ -2234,6 +2234,7 @@ body {
   z-index: 3;
   padding-top: 28px;
   padding-bottom: 28px;
+  transition: padding .4s;
 }
 
 .header .header__logo {
@@ -2256,6 +2257,11 @@ body {
 .header.header_active {
   background-color: #fff;
   transition: .35s;
+}
+
+.header.header_active .container {
+  padding-top: 18px;
+  padding-bottom: 18px;
 }
 
 .backdrop {
@@ -4273,9 +4279,10 @@ body {
     font-size: 15px;
   }
 
+  .header.header_active .container,
   .header .container {
-    padding-top: 12px;
-    padding-bottom: 20px;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 
   .header .header__logo {

@@ -16,9 +16,10 @@
       margin-bottom: 0;
     }
   }
-  @include respond-to($xs){
+
+  @include respond-to($xs) {
     width: 22px;
-    .line{
+    .line {
       height: 1px;
       margin-bottom: 5px;
 
@@ -45,6 +46,7 @@
     z-index: 3;
     padding-top: 28px;
     padding-bottom: 28px;
+    transition: padding .4s;
   }
 
   .header__logo {
@@ -67,6 +69,11 @@
   &.header_active {
     background-color: #fff;
     transition: .35s;
+
+    .container {
+      padding-top: 18px;
+      padding-bottom: 18px;
+    }
   }
 
   @include respond-to($screen-md) {
@@ -80,12 +87,15 @@
   @include respond-to($md) {
     .header__logo {
       margin-left: 0;
+
       .container {
         align-items: flex-end;
       }
-      .img-logo{
+
+      .img-logo {
         display: none;
       }
+
       .logo-mob {
         display: block;
       }
@@ -98,14 +108,15 @@
   }
 
   @include respond-to($xxs) {
-  .container{
-    padding-top: 12px;
-    padding-bottom: 20px;
-  }
-    .header__logo {
-        max-width: 141px;
+    &.header_active .container,
+    .container {
+      padding-top: 16px;
+      padding-bottom: 16px;
     }
-    .main-logo{
+    .header__logo {
+      max-width: 141px;
+    }
+    .main-logo {
       max-width: 61px;
     }
   }
