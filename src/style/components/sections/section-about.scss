@@ -38,6 +38,28 @@
   .wrap-img {
     width: 100%;
     padding-left: 16%;
+    height: 100%;
+
+    .img {
+      width: 100%;
+    }
+
+    .img-anim-1 {
+      position: absolute;
+      width: 38%;
+      bottom: 15px;
+      right: 0;
+      animation-delay: 1.2s;
+      animation-duration: 1.2s;
+    }
+
+    .img-anim-2 {
+      position: absolute;
+      top: 24px;
+      right: 0;
+      width: 21.6%;
+      animation-delay: .6s;
+    }
   }
 
   .text_primary-color {
@@ -46,20 +68,6 @@
 
   .bg_primary {
     max-width: 657px;
-  }
-
-  .img-anim-1 {
-    position: absolute;
-    width: 38%;
-    bottom: 15px;
-    right: 0;
-  }
-
-  .img-anim-2 {
-    position: absolute;
-    top: 24px;
-    right: 0;
-    width: 21.6%;
   }
 
   .open-up {
