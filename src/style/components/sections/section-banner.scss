@@ -69,7 +69,8 @@
     }
 
     &__link {
-      display: inline-block;
+      flex-shrink: 0;
+      display: block;
       max-width: 167px;
       width: 14%;
       margin-left: 6.25%;
@@ -226,6 +227,11 @@
       z-index: 2;
       font-size: 11px;
       max-width: 325px;
+      &__link {
+        width: 33.333%;
+        padding: 0 5px;
+        transition: none;
+      }
 
       .swiper-container {
         width: 100%;

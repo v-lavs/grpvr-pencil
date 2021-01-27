@@ -10,7 +10,6 @@
 $(document).ready(function () {
     // HEADER SCROLL
 
-
     var scrolled;
 
     function onHeaderScroll() {
@@ -126,7 +125,6 @@ $(document).ready(function () {
             if (!navSlider) {
                 navSlider = new Swiper('#navSlider', {
                     slidesPerView: 3,
-                    spaceBetween: 10,
                     navigation: {
                         nextEl: '.main-nav .swiper-button-next',
                         prevEl: '.main-nav .swiper-button-prev',
@@ -280,7 +278,6 @@ $(document).ready(function () {
     smoothScrollToAnchor('.main-nav .main-nav__link');
 
 
-
 //    ANIMATION
 
     // var slideInRight = new Waypoint({
@@ -303,13 +300,13 @@ $(document).ready(function () {
     let slideInRight = new Waypoint({
         element: document.querySelector('.section-about .section__thumb'),
         handler: function (direction) {
-           this.element.classList.add('active_anim');
+            this.element.classList.add('active_anim');
             console.log(this.element)
         },
         offset: '70%'
     });
 
-    document.querySelectorAll('.slide-in-right').forEach((el)=> {
+    document.querySelectorAll('.slide-in-right').forEach((el) => {
         new Waypoint({
             element: el,
             handler: function (direction) {
@@ -319,7 +316,7 @@ $(document).ready(function () {
         });
     });
 
-    document.querySelectorAll('.slide-in-left').forEach((el)=> {
+    document.querySelectorAll('.slide-in-left').forEach((el) => {
         new Waypoint({
             element: el,
             handler: function (direction) {
@@ -328,6 +325,29 @@ $(document).ready(function () {
             offset: '70%'
         });
     });
+
+    document.querySelectorAll('.zoom-in').forEach((el) => {
+        new Waypoint({
+            element: el,
+            handler: function (direction) {
+                this.element.classList.add('active');
+            },
+            offset: '70%'
+        });
+    });
+
+    var sticky = new Waypoint({
+        element: $('#triggerWhereBay')[0],
+        offset: '50%',
+        handler: function (direction) {
+            console.log(direction === 'down', direction )
+            if (direction === 'down') {
+                $('.where-buy').addClass('stuck');
+            } else if (direction === 'up') {
+                $('.where-buy').removeClass('stuck');
+            }
+        },
+    })
 });
 
 

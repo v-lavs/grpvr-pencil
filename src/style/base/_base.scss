@@ -129,7 +129,7 @@ body {
 }
 
 .where-buy {
-  position: fixed;
+  position: absolute;
   display: block;
   background-image: url(../assets/img/link-buy.png);
   background-repeat: no-repeat;
@@ -140,11 +140,35 @@ body {
   background-color: $white;
   border-radius: 50%;
   border: none;
-  bottom: 30vh;
   right: 8%;
+  bottom: -1%;
+  transition:  .2s;
   z-index: 100;
+  .border_dashed {
+    position: relative;
+    display: block;
+    animation-name: rotate;
+    animation-duration: 60s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  &.stuck {
+    position: fixed;
+    top: 30%;
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
 }
 .buy {
+  display: block;
   width: 100%;
   height: 100%;
   circle {
@@ -227,6 +251,10 @@ body {
 }
 
 @include respond-to($md) {
+  .where-buy {
+    width: 100px;
+    height: 100px;
+  }
   .site-title {
     font-size: 37px;
   }

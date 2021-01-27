@@ -419,6 +419,14 @@
     }
   }
 
+  @include respond-to($md) {
+    .part-left {
+      opacity: 1;
+      transform: translateX(0);
+      animation: none;
+    }
+  }
+
   @include respond-to($sm) {
     z-index: 0;
     padding: 0 15px;

@@ -44,7 +44,10 @@
 }
 
 .zoom-in {
-  animation: zoomIn 1s ease-out .2s forwards;
+  opacity: 0;
+  &.active{
+    animation: zoomIn .5s ease-out forwards;
+  }
 }
 
 @-webkit-keyframes zoomInDown {
@@ -69,14 +72,10 @@
   50% {
     opacity: 1
   }
-}
-
-line-box {
-  top:10px;
-  left: 10px;
-  overflow: hidden;
-  position: absolute;
-  display: block
+  100% {
+    transform: scale3d(1, 1, 1);
+    opacity: 1
+  }
 }
 
 .line-box svg {
