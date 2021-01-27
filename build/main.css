@@ -326,6 +326,7 @@ body {
 
 .slide-in-right {
   transform: translateX(100%);
+  opacity: 0;
 }
 
 .slide-in-right.active {
@@ -335,11 +336,12 @@ body {
 @keyframes slideInRight {
   0% {
     transform: translate3d(100%, 0, 0);
-    visibility: visible;
+    opacity: 0;
   }
 
   to {
     transform: translateZ(0);
+    opacity: 1;
   }
 }
 

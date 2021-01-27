@@ -308,6 +308,16 @@ $(document).ready(function () {
         },
         offset: '70%'
     });
+
+    document.querySelectorAll('.slide-in-right').forEach((el)=> {
+        new Waypoint({
+            element: el,
+            handler: function (direction) {
+                this.element.classList.add('active');
+            },
+            offset: '70%'
+        });
+    });
 });
 
 
