@@ -299,6 +299,7 @@
 
   }
 
+  .result,
   .reasons-btn__list {
     display: none;
   }
@@ -634,6 +635,9 @@
       width: 100%;
       margin-left: auto;
       margin-right: auto;
+    }
+    .result{
+      display: block;
     }
   }
   @include respond-to($xxs) {

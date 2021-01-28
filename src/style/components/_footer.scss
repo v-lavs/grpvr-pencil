@@ -28,9 +28,6 @@
   }
 
   .disclaimer {
-
-    display: none;
-
     position: fixed;
     bottom: 0;
     left: 0;
@@ -112,6 +109,15 @@
   margin: 0 auto 25px;
 }
 
+@include respond-to($lg) {
+  .footer {
+    .disclaimer {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+}
+
 @include respond-to($md) {
   .footnote {
     font-size: 9px;
@@ -143,9 +149,15 @@
 
     .top-row {
       font-size: 10px;
+      padding-bottom: 14vh;
+
       .footer-logo {
         max-width: 50px;
       }
+    }
+
+    .disclaimer {
+      padding: 7px 5px;
     }
   }
 }

@@ -177,14 +177,12 @@
     }
 
   }
-
   @include respond-to($xs) {
     .right-part {
       height: 50vw;
       width: 75vw;
     }
   }
-
   @include respond-to($xxs) {
     .section-prevention {
       background-position: left 140% top 30%;

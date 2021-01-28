@@ -19,6 +19,21 @@
 
     &__content {
       padding-right: 50%;
+      position: relative;
+      &:before{
+        position: absolute;
+        content: '';
+        background-image: url(../assets/img/49-a.png);
+        background-repeat: no-repeat;
+        background-position: 0;
+        background-size: cover;
+        width: 171px;
+        height: 81px;
+        display: block;
+        right: -55px;
+        bottom: -100px;
+        transform: rotate(180deg);
+      }
     }
 
     &__text {
