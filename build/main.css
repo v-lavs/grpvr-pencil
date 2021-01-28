@@ -2177,20 +2177,20 @@ path {
 }
 
 #stop1 {
-  animation: change-color1 2.5s linear infinite alternate;
+  animation: change-color1 2.8s ease-in-out infinite alternate;
 }
 
 #stop2 {
-  animation: change-color2 2.5s linear infinite alternate;
+  animation: change-color2 2.8s ease-in-out infinite alternate;
 }
 
 #stop3 {
-  animation: change-color3 2.5s linear infinite alternate;
+  animation: change-color3 2.8s ease-in-out infinite alternate;
 }
 
 @keyframes change-color1 {
   0% {
-    stop-color: #fc5206;
+    stop-color: #FC5111;
   }
 
   50% {
