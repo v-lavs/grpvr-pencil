@@ -15,10 +15,39 @@
     <!--styles-->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="build/main.css">
+
+    <style>
+        .preloader {
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            transition: 1s all;
+            opacity: 1;
+            visibility: visible;
+            z-index: 9999;
+        }
+
+        .preloader.done {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        #pen {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 
 <body>
-
+<div id="preloader" class="preloader">
+    <!--<img src="assets/img/preloader.gif" alt="" id="pen">-->
+</div>
 <div class="wrapper">
     <header class="header">
         <div class="container">
@@ -256,7 +285,7 @@
             <button type="button" id="openList" class="where-buy">
         <span class="border_dashed">
             <svg viewBox="0 0 105 105"  class="buy" preserveAspectRatio="none">
-                     <circle cx="52" cy="52" r="50" class="dashed" />
+                     <circle cx="53" cy="53" r="50" class="dashed" />
             </svg>
         </span>
             </button>
@@ -534,7 +563,7 @@
 
                         <div class="right-part">
                             <div class="section__blob-effect">
-                                <img src="assets/img/blob-big.png" alt="" class="img">
+                                <!--<img src="assets/img/blob-big.png" alt="" class="img">-->
                             </div>
                             <div class="section__parallax">
                                 <div class="mouse-parallax">
@@ -928,6 +957,15 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="build/main.js"></script>
-
+<script>
+    window.addEventListener("load", function (event) {
+        setTimeout(function () {
+            var preloader = document.getElementById('preloader');
+            if (!preloader.classList.contains('done')) {
+                preloader.classList.add('done');
+            }
+        }, 3000);
+    });
+</script>
 </body>
 </html>

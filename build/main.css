@@ -1618,16 +1618,15 @@ body {
 }
 
 .section-prevention .section__blob-effect {
-  position: relative;
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
 }
 
-.section-prevention .section__blob-effect .img {
-  width: 95%;
+.section-prevention .section__blob-effect canvas {
+  position: absolute;
+  left: -50%;
+  width: 240%;
+  top: -25%;
 }
 
 .section-prevention .how-prevent {
@@ -2544,6 +2543,12 @@ body {
   .section-stages .slider-stage__pagination-item.active {
     font-size: 22px;
   }
+
+  .section-prevention .section__blob-effect canvas {
+    left: -35%;
+    width: 200%;
+    top: 0;
+  }
 }
 
 @media only screen and (max-width: 1460px) {
@@ -3036,6 +3041,12 @@ body {
     left: 24px;
   }
 
+  .section-prevention .section__blob-effect canvas {
+    left: -14%;
+    width: 150%;
+    top: 7%;
+  }
+
   .section-advantages:after {
     height: 920px;
   }
@@ -3337,6 +3348,13 @@ body {
 
   .section-prevention .section__content {
     padding-right: 0;
+  }
+
+  .section-prevention .section__blob-effect canvas {
+    left: -50%;
+    width: 120%;
+    height: auto;
+    top: -32%;
   }
 
   .section-use .section__thumb {
@@ -3804,6 +3822,13 @@ body {
     width: 75vw;
   }
 
+  .section-prevention .section__blob-effect canvas {
+    width: 82%;
+    left: -25%;
+    top: 45%;
+    transform: translateY(-50%);
+  }
+
   .section-use .section__content {
     padding: 0;
   }
@@ -4172,7 +4197,26 @@ body {
   }
 
   .section-prevention .section__blob-effect {
-    transform: translateX(-57vw);
+    position: relative;
+  }
+
+  .section-prevention .section__blob-effect:before {
+    position: absolute;
+    content: '';
+    height: 60vw;
+    width: 60vw;
+    left: -35vw;
+    bottom: 0;
+    background-image: linear-gradient(35deg, #ff5200, #ff9600);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100%;
+    display: block;
+    border-radius: 50%;
+  }
+
+  .section-prevention .section__blob-effect canvas {
+    display: none;
   }
 
   .section-prevention .section__header {
