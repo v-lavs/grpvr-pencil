@@ -46,3 +46,56 @@
 }
 
 
+//ANIMATION
+
+path {
+  fill: url(#paint0_linear);
+}
+
+#stop1 {
+  animation: change-color1 2.5s linear infinite alternate;
+}
+
+#stop2 {
+  animation: change-color2 2.5s linear infinite alternate;
+}
+
+#stop3 {
+  animation: change-color3 2.5s linear infinite alternate;
+}
+
+@keyframes change-color1 {
+  0% {
+    stop-color: #fc5206;
+  }
+  50% {
+    stop-color: #FC7818;
+  }
+  100% {
+    stop-color: #FE921C;
+  }
+}
+
+@keyframes change-color2 {
+  0% {
+    stop-color: #FC7818
+  }
+  50% {
+    stop-color: #FE921C;
+  }
+  100% {
+    stop-color: #FC5111;
+  }
+}
+
+@keyframes change-color3 {
+  0% {
+    stop-color: #FE921C;
+  }
+  50% {
+    stop-color: #FC5111
+  }
+  100% {
+    stop-color: #FC7818
+  }
+}
