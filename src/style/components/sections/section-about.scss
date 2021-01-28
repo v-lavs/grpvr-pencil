@@ -30,7 +30,7 @@
         width: 171px;
         height: 81px;
         display: block;
-        right: -55px;
+        right: -15vw;
         bottom: -100px;
         transform: rotate(180deg);
       }
@@ -193,6 +193,9 @@
     .section__thumb {
       width: 118%;
       transform: translateX(-20px);
+    }
+    .section__content:before{
+      right: -16%;
     }
   }
 }
