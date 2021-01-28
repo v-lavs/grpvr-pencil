@@ -259,7 +259,7 @@ body {
   position: relative;
   display: block;
   animation-name: rotate;
-  animation-duration: 60s;
+  animation-duration: 15s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
