@@ -149,9 +149,10 @@ body {
     position: relative;
     display: block;
     animation-name: rotate;
-    animation-duration: 15s;
-    animation-timing-function: linear;
+    animation-duration: 1s;
+    //animation-timing-function: linear;
     animation-iteration-count: infinite;
+    animation-timing-function: steps(5, end);
   }
 
   &.stuck {
@@ -166,7 +167,7 @@ body {
     transform: rotate(0deg);
   }
   100% {
-    transform: rotate(-360deg);
+    transform: rotate(360deg);
   }
 }
 
