@@ -53,15 +53,15 @@ path {
 }
 
 #stop1 {
-  animation: change-color1 2.8s ease-in-out infinite alternate;
+  animation: change-color1 2s ease-in-out infinite alternate;
 }
 
 #stop2 {
-  animation: change-color2 2.8s ease-in-out infinite alternate;
+  animation: change-color2 2s ease-in-out infinite alternate;
 }
 
 #stop3 {
-  animation: change-color3 2.8s ease-in-out infinite alternate;
+  animation: change-color3 2s ease-in-out infinite alternate;
 }
 
 @keyframes change-color1 {
@@ -72,16 +72,16 @@ path {
     stop-color: #FC7818;
   }
   100% {
-    stop-color: #FE921C;
+    stop-color: orange;
   }
 }
 
 @keyframes change-color2 {
   0% {
-    stop-color: #FC7818
+    stop-color: orange;
   }
-  50% {
-    stop-color: #FE921C;
+50% {
+    stop-color: #FC7818;
   }
   100% {
     stop-color: #FC5111;
@@ -90,12 +90,12 @@ path {
 
 @keyframes change-color3 {
   0% {
-    stop-color: #FE921C;
+    stop-color: orange;
   }
   50% {
-    stop-color: #FC5111
+    stop-color: #FC5111;
   }
   100% {
-    stop-color: #FC7818
+    stop-color: #FC7818;
   }
 }
