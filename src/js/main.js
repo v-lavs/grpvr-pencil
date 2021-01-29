@@ -2,7 +2,6 @@
  *To include js file from libraries write: `//= include ./path-to-file`
  * */
 //= include ../../node_modules/jquery/dist/jquery.js ;
-
 /**
  * CUSTOM SCRIPTS
  **/
@@ -332,15 +331,19 @@ $(document).ready(function () {
                 $('.where-buy').removeClass('stuck');
             }
         },
-    })
+    });
 
+//    OPPEN LIST BUY
+    $( "#openList" ).click(function() {
+        $('.where-buy-list').toggle(500);
+    });
 
 //    CANVAS
 
     "use strict";
 
     function _typeof(obj) {
-        "@babel/helpers - typeof";
+
         if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
             _typeof = function _typeof(obj) {
                 return typeof obj;

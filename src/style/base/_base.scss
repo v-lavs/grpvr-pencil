@@ -144,7 +144,7 @@ body {
   bottom: -1%;
   transition: .2s;
   z-index: 100;
-
+  cursor: pointer;
   .border_dashed {
     position: relative;
     display: block;
@@ -160,6 +160,27 @@ body {
     position: fixed;
     top: 30%;
     transform: translateY(-50%);
+  }
+  .where-buy-list {
+    display: none;
+    position: absolute;
+    background: #fff;
+    box-shadow: 0 0 10px 0 rgba(255, 84, 0, .5);
+    padding: 5px 15px;
+    right: 0;
+    color: #ff5400;
+    font-size: 16px;
+    font-family: $secondary-font;
+    //&.show{
+    //  display: block;
+    //}
+  }
+  .where-buy-list li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+    &:last-child{
+      border: none;
+    }
   }
 }
 
