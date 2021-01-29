@@ -53,23 +53,26 @@ path {
 }
 
 #stop1 {
-  animation: change-color1 2s ease-in-out infinite alternate;
+  animation: change-color1 1.7s ease-in-out infinite alternate;
 }
 
 #stop2 {
-  animation: change-color2 2s ease-in-out infinite alternate;
+  animation: change-color2 1.7s ease-in-out infinite alternate;
 }
 
 #stop3 {
-  animation: change-color3 2s ease-in-out infinite alternate;
+  animation: change-color3 1.7s ease-in-out infinite alternate;
 }
 
 @keyframes change-color1 {
   0% {
     stop-color: #FC5111;
   }
-  50% {
+  25% {
     stop-color: #FC7818;
+  }
+  60% {
+    stop-color: #FE921C;
   }
   100% {
     stop-color: #FE921C;
@@ -78,25 +81,30 @@ path {
 
 @keyframes change-color2 {
   0% {
-    stop-color: #FC5111;
+    stop-color: #FC7818;
   }
-50% {
+  60% {
     stop-color: #FE921C;
   }
+  85% {
+    stop-color: #FC5111;
+  }
   100% {
-    stop-color: #FC7818;
+    stop-color: #FC5111;
   }
 }
 
 @keyframes change-color3 {
   0% {
-    stop-color: #FC7818;
-
+    stop-color: #FE921C;
   }
-  50% {
-    stop-color: #FC5111;
+  40% {
+    stop-color: #FC7818;
+  }
+ 65% {
+    stop-color: #FC7818;
   }
   100% {
-    stop-color: #FE921C;
+    stop-color: #FC5111;
   }
 }
