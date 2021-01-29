@@ -2201,15 +2201,15 @@ path {
   fill: url(#paint0_linear);
 }
 
-#stop1 {
+.stop1 {
   animation: change-color1 1.7s ease-in-out infinite alternate;
 }
 
-#stop2 {
+.stop2 {
   animation: change-color2 1.7s ease-in-out infinite alternate;
 }
 
-#stop3 {
+.stop3 {
   animation: change-color3 1.7s ease-in-out infinite alternate;
 }
 
