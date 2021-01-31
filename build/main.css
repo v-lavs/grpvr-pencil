@@ -738,7 +738,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 96px 40px 70px 14%;
+  padding: 96px 40px 70px 245px;
   margin-left: auto;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -2542,12 +2542,11 @@ path {
 
 .popup {
   position: relative;
-  background-color: #000;
-  max-width: 1200px;
-  width: 80%;
-  padding: 37.25% 10px 10px;
-  border-radius: 8px;
+  padding-top: 25.12%;
+  width: 50%;
   overflow: hidden;
+  height: 0;
+  border-radius: 8px;
 }
 
 .popup .btn-close {
@@ -2564,15 +2563,12 @@ path {
 
 .popup .video {
   position: absolute;
-  top: -9999px;
-  left: -9999px;
-  right: -9999px;
-  bottom: -9999px;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  margin: auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-width: 0;
+  outline-width: 0;
 }
 
 @media screen and (max-width: 1800px) {
@@ -2612,6 +2608,10 @@ path {
   .header__nav .menu__item {
     margin-left: 15px;
     margin-right: 15px;
+  }
+
+  .section-banner .banner {
+    padding-left: 220px;
   }
 
   .section-banner .banner__content {
@@ -2713,6 +2713,7 @@ path {
   .section-banner .banner {
     padding-top: 50px;
     padding-bottom: 50px;
+    padding-left: 16%;
   }
 
   .section-banner .left-part {
@@ -3542,6 +3543,11 @@ path {
   .aside .banner__content .text_middle {
     font-size: 27px;
   }
+
+  .popup {
+    width: 80%;
+    padding-top: 45%;
+  }
 }
 
 @media only screen and (max-width: 840px) {
@@ -4202,6 +4208,8 @@ path {
 
   .popup {
     width: 90%;
+    padding-top: 50.62%;
+    border-radius: 3px;
   }
 }
 
@@ -4594,10 +4602,6 @@ path {
 
   .footer .disclaimer {
     padding: 7px 5px;
-  }
-
-  .popup {
-    width: 100%;
   }
 }
 
