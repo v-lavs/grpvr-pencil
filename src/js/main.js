@@ -670,27 +670,27 @@ $(document).ready(function () {
         var mouseMove = function mouseMove(e) {
             var pos = blob.center;
             var diff = {
-                x: e.clientX - pos.x,
-                y: e.clientY - pos.y
+                x: e.offsetX - pos.x,
+                y: e.offsetY - pos.y
             };
             var dist = Math.sqrt(diff.x * diff.x + diff.y * diff.y);
             var angle = null;
             blob.mousePos = {
-                x: pos.x - e.clientX,
-                y: pos.y - e.clientY
+                x: pos.x - e.offsetX,
+                y: pos.y - e.offsetY
             };
 
             if (dist < blob.radius && hover === false) {
                 var vector = {
-                    x: e.clientX - pos.x,
-                    y: e.clientY - pos.y
+                    x: e.offsetX - pos.x,
+                    y: e.offsetY - pos.y
                 };
                 angle = Math.atan2(vector.y, vector.x);
                 hover = true; // blob.color = '#77FF00';
             } else if (dist > blob.radius && hover === true) {
                 var _vector = {
-                    x: e.clientX - pos.x,
-                    y: e.clientY - pos.y
+                    x: e.offsetX - pos.x,
+                    y: e.offsetY - pos.y
                 };
                 angle = Math.atan2(_vector.y, _vector.x);
                 hover = false;
@@ -709,8 +709,8 @@ $(document).ready(function () {
 
                 if (nearestPoint) {
                     var strength = {
-                        x: oldMousePoint.x - e.clientX,
-                        y: oldMousePoint.y - e.clientY
+                        x: oldMousePoint.x - e.offsetX,
+                        y: oldMousePoint.y - e.offsetY
                     };
                     strength = Math.sqrt(strength.x * strength.x + strength.y * strength.y) * 10;
                     if (strength > 100) strength = 100;
@@ -719,8 +719,8 @@ $(document).ready(function () {
                 }
             }
 
-            oldMousePoint.x = e.clientX;
-            oldMousePoint.y = e.clientY;
+            oldMousePoint.x = e.offsetX;
+            oldMousePoint.y = e.offsetY;
         };
 
         window.addEventListener('pointermove', mouseMove);
