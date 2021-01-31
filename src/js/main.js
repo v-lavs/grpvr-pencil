@@ -457,10 +457,15 @@ $(document).ready(function () {
                 var yc = (p1.y + _p2.y) / 2;
                 ctx.quadraticCurveTo(p1.x, p1.y, xc, yc); // ctx.lineTo(_p2.x, _p2.y);
                 // ctx.closePath();
+                ctx = canvas.getContext('2d');
+                var gradient = ctx.createLinearGradient(0, 0, 700, 400);
+                gradient.addColorStop(0.7, '#ff5200');
+                gradient.addColorStop(1, '#ff9600'); // ctx.closePath();
 
-                ctx.fillStyle = this.color;
+                ctx.fillStyle = gradient;
                 ctx.fill();
-                ctx.strokeStyle = '#ff5400'; // ctx.stroke();
+                ctx.strokeStyle = '#000000'; // ctx.stroke();
+                // ctx.strokeStyle = '#ff5400'; // ctx.stroke();
 
                 /*
                     ctx.fillStyle = '#000000';
@@ -723,8 +728,8 @@ $(document).ready(function () {
             oldMousePoint.y = e.offsetY;
         };
 
-        window.addEventListener('pointermove', mouseMove);
-        // document.querySelector('.section-prevention .right-part').addEventListener('pointermove', mouseMove);
+        // window.addEventListener('pointermove', mouseMove);
+        document.querySelector('.section-prevention .right-part').addEventListener('pointermove', mouseMove);
         blob.canvas = canvas;
         blob.init();
         blob.render();

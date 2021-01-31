@@ -42,10 +42,10 @@
     canvas {
       transform: translateX(11%);
       position: absolute;
-      top: -5px;
-      bottom: -5px;
-      left: -5px;
-      right: -5px;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
     }
   }
 
@@ -121,12 +121,9 @@
   .section__parallax {
     position: absolute;
     left: 0;
-    //top: 0;
+    top: 0;
     right: 0;
     bottom: 0;
-    top: 50%;
-    height: 50%;
-    transform: translateY(-50%);
   }
 
   .mouse-parallax {
@@ -156,6 +153,12 @@
     .section__blob-effect canvas {
       transform: translateX(30%);
       width: 85%;
+    }
+  }
+
+  @include respond-to($lg) {
+    .section__blob-effect canvas{
+      transform: translateX(25%);
     }
   }
   @include respond-to($md) {
