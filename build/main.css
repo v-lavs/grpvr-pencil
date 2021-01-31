@@ -357,8 +357,8 @@ body {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  transition: .1s;
   z-index: -1;
+  transition: .35s;
 }
 
 .mouse-parallax__img {
@@ -3296,6 +3296,7 @@ path {
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
     z-index: 1;
   }
 
