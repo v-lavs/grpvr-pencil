@@ -155,7 +155,6 @@
       width: 85%;
     }
   }
-
   @include respond-to($lg) {
     .section__blob-effect canvas{
       transform: translateX(25%);
@@ -193,10 +192,10 @@
       padding-right: 0;
     }
     .section__blob-effect canvas {
-      left: -85%;
-      width: 120%;
+      left: -70%;
+      width: 130% !important;
       height: auto;
-      top: -50px;
+      top: -77px;
     }
   }
   @include respond-to($xs) {
@@ -205,10 +204,30 @@
       width: 75vw;
     }
     .section__blob-effect canvas {
-      width: 82%;
       left: -25%;
       top: 45%;
       transform: translateY(-50%);
+    }
+    .section__blob-effect {
+      position: relative;
+
+      &:before {
+        position: absolute;
+        content: '';
+        height: 50vw;
+        width: 50vw;
+        left: -20vw;
+        bottom: 15px;
+        background-image: linear-gradient(35deg, #ff5200, #ff9600);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: 100%;
+        display: block;
+        border-radius: 50%;
+      }
+      canvas {
+        display: none;
+      }
     }
   }
   @include respond-to($xxs) {
@@ -233,26 +252,12 @@
       background-size: 93%;
     }
     .section__blob-effect {
-      position: relative;
 
       &:before {
-        position: absolute;
-        content: '';
         height: 60vw;
         width: 60vw;
         left: -35vw;
         bottom: 0;
-        background-image: linear-gradient(35deg, #ff5200, #ff9600);
-        background-repeat: no-repeat;
-        background-position: 0 0;
-        background-size: 100%;
-        display: block;
-        border-radius: 50%;
-      }
-
-      //transform: translateX(-57vw);
-      canvas {
-        display: none;
       }
     }
     .section__header {
