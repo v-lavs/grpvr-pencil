@@ -21,8 +21,9 @@
   background-color: #000;
   max-width: 1200px;
   width: 80%;
-  padding: 10px;
+  padding: 37.25% 10px 10px;
   border-radius: 8px;
+  overflow: hidden;
 
   .btn-close {
     position: relative;
@@ -36,9 +37,18 @@
     outline: none;
   }
   .video{
-    width: 100%;
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    right: -9999px;
+    bottom: -9999px;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
     height: auto;
+    margin: auto;
   }
+
   @include respond-to($xs){
     width: 90%;
   }

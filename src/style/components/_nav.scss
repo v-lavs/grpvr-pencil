@@ -194,10 +194,12 @@
         padding-left: 15px;
         padding-right: 15px;
       }
-      a.dropdown{
+
+      a.dropdown {
         padding-left: 20px;
         padding-right: 37px;
-        &:before{
+
+        &:before {
           right: 24px;
         }
       }
@@ -291,6 +293,7 @@
       flex-direction: column;
       padding: 40px 20px;
       width: 100%;
+      height: max-content;
 
       &__item {
         &:hover > .sub-menu {

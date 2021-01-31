@@ -139,4 +139,9 @@
       }
     }
   }
+  @include respond-to($xxs) {
+    .section__thumb{
+      width: 85%;
+    }
+  }
 }

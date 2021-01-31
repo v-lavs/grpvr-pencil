@@ -3,6 +3,7 @@
   padding-top: 8.5%;
   padding-bottom: 93px;
   color: #fff;
+  z-index: 3;
 
   .desktop-hidden {
     display: none !important;
@@ -114,6 +115,11 @@
     }
   }
 
+  .slider-stage__pagination-link {
+    display: block;
+    width: 100%;
+  }
+
   .slider-stages__part {
     width: 50%;
     flex-grow: 1;
@@ -169,6 +175,10 @@
       width: 125px;
       height: 125px;
       margin-bottom: 33px;
+
+      img {
+        width: 100%;
+      }
     }
   }
 
@@ -417,6 +427,7 @@
       position: relative;
       margin-bottom: 25px;
       text-align: left;
+
       .icon {
         position: absolute;
         width: 40px;
@@ -505,40 +516,50 @@
     }
   }
 
-  @include respond-to($xxs){
-    .image-slider__circle{
+  @include respond-to($xxs) {
+    .image-slider__circle {
       width: 300px;
       height: 300px;
     }
-    .slider-content__text-wrap{
+    .slider-content__text-wrap {
       max-width: 320px;
       width: 100%;
+      margin-top: 50px;
     }
-    .image-slider{
+    .image-slider {
       background-size: 300px 300px;
+      background-position: top 26px center;
+      &__circle{
+        margin-top: 26px;
+      }
     }
-    .slider-stage__pagination{
+    .slider-stage__pagination {
       max-width: 95%;
       top: calc(50% + 35px);
     }
-    .slider-stage__progress{
-      .slider-stage__handle{
+    .slider-stage__progress {
+      .slider-stage__handle {
         width: 45px;
         height: 12px;
       }
-      .slider-stage__progress-track{
+
+      .slider-stage__progress-track {
         height: 4px;
       }
     }
-  .days-label {
+    .days-label {
       right: -44px;
       padding: 10px 0;
       width: 120px;
       height: 77px;
-      top: 0;
-    .day{
-      padding: 30px 0 0 20px;
+      top: -6px;
+
+      .day {
+        padding: 30px 0 0 20px;
+      }
     }
+    .slider-content__title{
+      margin-bottom: 12px;
     }
   }
 }

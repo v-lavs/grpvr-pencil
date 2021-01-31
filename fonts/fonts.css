@@ -11,14 +11,6 @@
 
 
 @font-face {
-	font-family: 'Harabara';
-	src: url('Harabara.ttf') format('truetype');
-	font-weight: 700;
-	font-style: normal;
-}
-
-
-@font-face {
 	font-family: 'Harabara Mais';
 	src: url('HarabaraMaisBold-HarabaraMaisBold.eot');
 	src: url('HarabaraMaisBold-HarabaraMaisBold.eot?#iefix') format('embedded-opentype'),

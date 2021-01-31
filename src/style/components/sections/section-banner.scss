@@ -12,7 +12,7 @@
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    max-width: 534px;
+    max-width: 527px;
     width: 32%;
     background-position: center;
     background-repeat: no-repeat;
@@ -31,15 +31,15 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 96px 40px 70px 15%;
+    padding: 96px 40px 70px 14%;
     margin-left: auto;
     flex-wrap: wrap;
     justify-content: flex-end;
 
     &__right-part {
       position: relative;
-      width: 38%;
-      padding-left: 35px;
+      width: 37%;
+      padding-left: 80px;
 
       &:before {
         position: absolute;
@@ -55,7 +55,8 @@
     }
 
     &__main-img {
-      width: 62%;
+      width: 63%;
+      padding-right: 20px;
     }
   }
 
@@ -129,7 +130,7 @@
     }
   }
 
-  .swiper-container{
+  .swiper-container {
     padding-top: 15px;
   }
 
@@ -227,6 +228,7 @@
       z-index: 2;
       font-size: 11px;
       max-width: 325px;
+
       &__link {
         width: 33.333%;
         padding: 0 5px;
@@ -295,9 +297,15 @@
 
   @include respond-to($xxs) {
     padding-top: 60px;
+    .banner {
+      padding-left: 0;
+      padding-right: 0;
+    }
     .left-part {
       min-height: 384px;
-      .text_md{
+      left: -15px;
+      right: 15px;
+      .text_md {
         font-size: 15px;
       }
     }
@@ -306,10 +314,7 @@
     }
   }
   @media only screen and (max-width: 420px) {
-    .banner {
-      padding-left: 0;
-      padding-right: 0;
-    }
+
     .left-part {
       border-radius: 0;
     }
