@@ -398,6 +398,8 @@ $(document).ready(function () {
         return Constructor;
     }
 
+    const radioRatio = 0.33;
+
     var canvas, ctx;
     var render, init;
     var blob;
@@ -405,13 +407,14 @@ $(document).ready(function () {
     var Blob = /*#__PURE__*/function () {
         function Blob() {
             _classCallCheck(this, Blob);
-
+            console.log(this)
             this.points = [];
         }
 
         _createClass(Blob, [{
             key: "init",
             value: function init() {
+                this.radius = this.canvas.height * radioRatio;
                 for (var i = 0; i < this.numPoints; i++) {
                     var point = new Point(this.divisional * (i + 1), this); // point.acceleration = -1 + Math.random() * 2;
 
@@ -645,7 +648,6 @@ $(document).ready(function () {
     blob = new Blob();
 
     init = function init() {
-
         var wrapBlobEffect = document.querySelector('.section__blob-effect');
         canvas = document.createElement('canvas');
         canvas.setAttribute('touch-action', 'none');
@@ -654,6 +656,7 @@ $(document).ready(function () {
         var resize = function resize() {
             canvas.width = $('.section-prevention .right-part').width();
             canvas.height = $('.section-prevention .right-part').height();
+            blob.radius = canvas.height * radioRatio;
         };
 
         window.addEventListener('resize', resize);
@@ -699,7 +702,6 @@ $(document).ready(function () {
                 var distanceFromPoint = 100;
                 blob.points.forEach(function (point) {
                     if (Math.abs(angle - point.azimuth) < distanceFromPoint) {
-                        // console.log(point.azimuth, angle, distanceFromPoint);
                         nearestPoint = point;
                         distanceFromPoint = Math.abs(angle - point.azimuth);
                     }
@@ -712,7 +714,7 @@ $(document).ready(function () {
                     };
                     strength = Math.sqrt(strength.x * strength.x + strength.y * strength.y) * 10;
                     if (strength > 100) strength = 100;
-                    nearestPoint.acceleration = strength / 100 * (hover ? -1 : 1);
+                    nearestPoint.acceleration = strength / 90 ;
                 }
             }
 
@@ -720,7 +722,7 @@ $(document).ready(function () {
             oldMousePoint.y = e.clientY;
         };
 
-        window.addEventListener('pointermove', mouseMove);
+        document.querySelector('.section-prevention .right-part').addEventListener('pointermove', mouseMove);
         blob.canvas = canvas;
         blob.init();
         blob.render();

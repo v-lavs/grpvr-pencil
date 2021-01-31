@@ -1667,6 +1667,7 @@ body {
 }
 
 .section-prevention .section__blob-effect canvas {
+  transform: translateX(15%);
   position: absolute;
   top: -5px;
   bottom: -5px;
@@ -1834,10 +1835,7 @@ body {
   font-family: "Arial", sans-serif;
   color: #f3faff;
   line-height: .8;
-  text-shadow: #d3d9dc 1px 1px 0,
- #d3d9dc -1px -1px 0,
- #d3d9dc -1px 1px 0,
- #d3d9dc 1px -1px 0;
+  text-shadow: #d3d9dc 1px 1px 0, #d3d9dc -1px -1px 0, #d3d9dc -1px 1px 0, #d3d9dc 1px -1px 0;
 }
 
 .section-use .usage-step:after {
@@ -3290,7 +3288,6 @@ path {
     display: grid;
     grid-template-columns: 1fr 1fr;
     z-index: 1;
-    grid-gap: 10px;
   }
 
   .section-reasons .reasons-list__item:nth-child(n) {
