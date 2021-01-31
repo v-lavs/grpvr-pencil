@@ -210,17 +210,18 @@
 
 @include respond-to($md) {
   .header__nav {
-    padding-top: 30px;
     position: fixed;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
     max-width: 320px;
+    display: block;
     background-color: $white;
     max-height: 100%;
     overflow-y: auto;
     text-align: left;
+    padding: 70px 20px 18vh;
     transition: transform .5s;
     transform: translateX(-100%);
     z-index: 999;
@@ -291,9 +292,7 @@
 
     .menu {
       flex-direction: column;
-      padding: 40px 20px;
       width: 100%;
-      height: max-content;
 
       &__item {
         &:hover > .sub-menu {

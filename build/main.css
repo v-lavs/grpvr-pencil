@@ -2974,17 +2974,18 @@ path {
   }
 
   .header__nav {
-    padding-top: 30px;
     position: fixed;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
     max-width: 320px;
+    display: block;
     background-color: #ffffff;
     max-height: 100%;
     overflow-y: auto;
     text-align: left;
+    padding: 70px 20px 18vh;
     transition: transform .5s;
     transform: translateX(-100%);
     z-index: 999;
@@ -3054,9 +3055,7 @@ path {
 
   .header__nav .menu {
     flex-direction: column;
-    padding: 40px 20px;
     width: 100%;
-    height: max-content;
   }
 
   .header__nav .menu__item:hover > .sub-menu {
