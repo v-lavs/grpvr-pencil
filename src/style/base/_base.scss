@@ -8,10 +8,12 @@ body {
 }
 
 .wrapper {
+  position: relative;
   background-color: #fff;
   overflow: hidden;
   max-width: 1920px;
   margin: 0 auto;
+  z-index: 1;
 }
 
 .img {

@@ -398,7 +398,7 @@ $(document).ready(function () {
         return Constructor;
     }
 
-    const radioRatio = 0.33;
+    const radioRatio = 0.35;
 
     var canvas, ctx;
     var render, init;
@@ -714,7 +714,8 @@ $(document).ready(function () {
                     };
                     strength = Math.sqrt(strength.x * strength.x + strength.y * strength.y) * 10;
                     if (strength > 100) strength = 100;
-                    nearestPoint.acceleration = strength / 90 ;
+                    // nearestPoint.acceleration = strength / 90  ;
+                    nearestPoint.acceleration = strength / 100 * (hover ? -1 : 1);
                 }
             }
 
@@ -722,7 +723,8 @@ $(document).ready(function () {
             oldMousePoint.y = e.clientY;
         };
 
-        document.querySelector('.section-prevention .right-part').addEventListener('pointermove', mouseMove);
+        window.addEventListener('pointermove', mouseMove);
+        // document.querySelector('.section-prevention .right-part').addEventListener('pointermove', mouseMove);
         blob.canvas = canvas;
         blob.init();
         blob.render();

@@ -117,10 +117,12 @@ body {
 }
 
 .wrapper {
+  position: relative;
   background-color: #fff;
   overflow: hidden;
   max-width: 1920px;
   margin: 0 auto;
+  z-index: 1;
 }
 
 .img {
@@ -1667,7 +1669,7 @@ body {
 }
 
 .section-prevention .section__blob-effect canvas {
-  transform: translateX(15%);
+  transform: translateX(11%);
   position: absolute;
   top: -5px;
   bottom: -5px;
@@ -1743,10 +1745,11 @@ body {
 .section-prevention .section__parallax {
   position: absolute;
   left: 0;
-  top: 0;
   right: 0;
-  z-index: 3;
   bottom: 0;
+  top: 50%;
+  height: 50%;
+  transform: translateY(-50%);
 }
 
 .section-prevention .mouse-parallax__bg {
@@ -1754,6 +1757,7 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 1;
+  left: 5%;
 }
 
 .section-prevention .mouse-parallax__img {
@@ -2673,6 +2677,11 @@ path {
   .section-stages .slider-stage__pagination-item.active {
     font-size: 22px;
   }
+
+  .section-prevention .section__blob-effect canvas {
+    transform: translateX(30%);
+    width: 85%;
+  }
 }
 
 @media only screen and (max-width: 1460px) {
@@ -3463,10 +3472,10 @@ path {
   }
 
   .section-prevention .section__blob-effect canvas {
-    left: -50%;
+    left: -85%;
     width: 120%;
     height: auto;
-    top: -32%;
+    top: -50px;
   }
 
   .section-use .section__thumb {
@@ -4338,6 +4347,14 @@ path {
   .section-prevention .right-part {
     width: 90%;
     margin: 40px 0;
+  }
+
+  .section-prevention .section__parallax {
+    height: 100%;
+  }
+
+  .section-prevention .mouse-parallax__img {
+    width: 100%;
   }
 
   .section-prevention .mouse-parallax__content {

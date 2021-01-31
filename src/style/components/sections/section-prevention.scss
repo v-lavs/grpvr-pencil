@@ -38,8 +38,9 @@
   .section__blob-effect {
     width: 100%;
     height: 100%;
+
     canvas {
-      transform: translateX(15%);
+      transform: translateX(11%);
       position: absolute;
       top: -5px;
       bottom: -5px;
@@ -120,10 +121,14 @@
   .section__parallax {
     position: absolute;
     left: 0;
-    top: 0;
+    //top: 0;
     right: 0;
-    z-index: 3;
+    //z-index: 3;
     bottom: 0;
+
+    top: 50%;
+    height: 50%;
+    transform: translateY(-50%);
   }
 
   .mouse-parallax {
@@ -132,7 +137,9 @@
       align-items: center;
       justify-content: center;
       z-index: 1;
+      left: 5%;
     }
+
     &__img {
       width: 80%;
       height: auto;
@@ -147,6 +154,12 @@
     }
   }
 
+  @include respond-to($screen-lg) {
+    .section__blob-effect canvas {
+      transform: translateX(30%);
+      width: 85%;
+    }
+  }
   @include respond-to($md) {
 
     .how-prevent {
@@ -179,10 +192,10 @@
       padding-right: 0;
     }
     .section__blob-effect canvas {
-      left: -50%;
+      left: -85%;
       width: 120%;
       height: auto;
-      top: -32%;
+      top: -50px;
     }
   }
   @include respond-to($xs) {
@@ -206,6 +219,12 @@
     .right-part {
       width: 90%;
       margin: 40px 0;
+    }
+    .section__parallax{
+      height: 100%;
+    }
+    .mouse-parallax__img{
+      width: 100%;
     }
     .mouse-parallax__content {
       position: relative;
