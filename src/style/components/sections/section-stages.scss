@@ -422,6 +422,7 @@
       font-size: 10px;
     }
     .slider-content__title {
+      display: inline-block;
       font-size: 20px;
       padding-left: 57px;
       position: relative;
@@ -559,7 +560,7 @@
       }
     }
     .slider-content__title{
-      margin-bottom: 12px;
+      margin-bottom: 20px;
     }
   }
 }

@@ -245,15 +245,27 @@ $(document).ready(function () {
         slidersInit();
     });
 
+    var text_timer = null;
 
     $('.reason-icon__list .reason-icon__item').click(function (e) {
         e.preventDefault();
+        clearTimeout(text_timer);
+
         $(this).parent().find('.reason-icon__item').removeClass('active_icon');
         $(this).addClass('active_icon');
         var title = $(this).attr('data-title');
-
         var result_block = $(this).parents('.round_big');
-        result_block.find('#reasonsResult').html(title);
+        var res_text = result_block.find('#reasonsResult')
+        res_text.fadeOut(350);
+
+        setTimeout(function () {
+            res_text.html(title);
+            res_text.fadeIn(400);
+        }, 400);
+
+        text_timer = setTimeout(function () {
+            res_text.fadeOut(400);
+        }, 3000);
     });
 
 
@@ -334,7 +346,7 @@ $(document).ready(function () {
     });
 
 //    OPPEN LIST BUY
-    $( "#openList" ).click(function() {
+    $("#openList").click(function () {
         $('.where-buy-list').toggle(500);
     });
 
@@ -501,7 +513,7 @@ $(document).ready(function () {
                 }
             },
             get: function get() {
-                return this._radius || 250;
+                return this._radius || 300;
             }
         }, {
             key: "position",
@@ -640,8 +652,8 @@ $(document).ready(function () {
         wrapBlobEffect.appendChild(canvas);
 
         var resize = function resize() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
+            canvas.width = $('.section-prevention .right-part').width();
+            canvas.height = $('.section-prevention .right-part').height();
         };
 
         window.addEventListener('resize', resize);
@@ -706,15 +718,12 @@ $(document).ready(function () {
 
             oldMousePoint.x = e.clientX;
             oldMousePoint.y = e.clientY;
-        }; // window.addEventListener('mousemove', mouseMove);
-
+        };
 
         window.addEventListener('pointermove', mouseMove);
         blob.canvas = canvas;
         blob.init();
         blob.render();
-
-
     };
 
     init();

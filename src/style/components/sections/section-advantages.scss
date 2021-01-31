@@ -255,24 +255,25 @@
     .aside_desktop {
       display: none;
     }
+    .wrap-img {
+      display: flex;
+      flex-direction: column;
+    }
     .go-instruction {
+      position: relative;
       display: block;
-      left: 55px;
-      bottom:0;
+      margin: 30px auto 0;
     }
   }
-  @media screen and(max-width: 660px) {
-    .go-instruction {
-      bottom: 70px;
-    }
-  }
+
   @include respond-to($xxs) {
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 56px;
     .go-instruction {
+      position: absolute;
       left: 24px;
-      top: 68%;
+      top: 60%;
     }
     .section__content {
       padding-left: 0;
