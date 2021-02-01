@@ -23,6 +23,8 @@
             align-items: center;
             left: 0;
             top: 0;
+            bottom: 0;
+            right: 0;
             width: 100%;
             height: 100%;
             transition: 1s all;
@@ -38,14 +40,27 @@
 
         #pen {
             width: 100%;
-            height: 100%;
+            height: auto;
+            object-fit: cover;
         }
     </style>
 </head>
 
 <body>
 <div id="preloader" class="preloader">
-    <img src="assets/img/preloader.gif" alt="" id="pen">
+
+    <picture>
+        <source srcset="assets/preloader_pen/preloader.gif" type="image/gif" media="(max-width: 1920px)">
+        <source srcset="assets/preloader_pen/desktop_1440x734.gif"  type="image/gif" media="(max-width: 1440px)">
+        <source srcset="assets/preloader_pen/tablet_1024x768.gif" type="image/gif" media="(max-width: 1024px)">
+        <source srcset="assets/preloader_pen/tablet_768x1024.gif" type="image/gif"  media="(max-width: 768px)">
+        <source srcset="assets/preloader_pen/mobile_640x360.gif" type="image/gif"  media="(max-width: 640px)">
+        <source srcset="assets/preloader_pen/mobile_360x640.gif" type="image/gif" media="(max-width: 360px) and (orientation: portrait)">
+
+        <img srcset="assets/preloader_pen/preloader.gif" alt="preloader-pen" id="pen">
+    </picture>
+
+
 </div>
 <div class="wrapper">
     <header class="header">

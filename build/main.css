@@ -3604,6 +3604,7 @@ path {
     position: relative;
     transform: translate(0);
     width: 100%;
+    left: auto;
     max-width: 400px;
     margin: -100px auto 0;
   }
