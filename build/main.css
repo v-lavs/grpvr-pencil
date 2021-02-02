@@ -263,7 +263,7 @@ body {
   width: 85px;
   height: 85px;
   border: none;
-  right: 8%;
+  right: 4.25%;
   bottom: 15%;
   transition: .2s;
   z-index: 100;
@@ -882,21 +882,6 @@ body {
   position: relative;
 }
 
-.section-about .section__content:before {
-  position: absolute;
-  content: '';
-  background-image: url(../assets/img/49-a.png);
-  background-repeat: no-repeat;
-  background-position: 0;
-  background-size: cover;
-  width: 171px;
-  height: 81px;
-  display: block;
-  right: -15vw;
-  bottom: -100px;
-  transform: rotate(180deg);
-}
-
 .section-about .section__text {
   width: 100%;
 }
@@ -933,9 +918,9 @@ body {
 
 .section-about .wrap-img .img-anim-2 {
   position: absolute;
-  top: 24px;
-  right: 0;
-  width: 21.6%;
+  top: 28px;
+  right: -9%;
+  width: 34%;
 }
 
 .section-about .active_anim .img {
@@ -981,9 +966,13 @@ body {
   background-image: linear-gradient(to right, #ff9800, #ff5400);
 }
 
+.section-about .img-mob {
+  display: none;
+}
+
 .section-manifestations {
   position: relative;
-  padding-bottom: 11.5%;
+  padding-bottom: 3.5%;
 }
 
 .section-manifestations .section__thumb {
@@ -2572,6 +2561,10 @@ path {
 }
 
 @media screen and (max-width: 1800px) {
+  .where-buy {
+    right: 30px;
+  }
+
   .section-about .section__thumb {
     right: -15px;
   }
@@ -3137,6 +3130,11 @@ path {
     font-size: 20px;
   }
 
+  .section-about .wrap-img .img-anim-2 {
+    top: 16px;
+    right: -11%;
+  }
+
   .section-manifestations .section__content {
     min-height: 460px;
   }
@@ -3225,6 +3223,10 @@ path {
 
   .section-about br {
     display: none;
+  }
+
+  .section-about .wrap-img .img-anim-2 {
+    right: 0;
   }
 
   .section-manifestations {
@@ -3731,6 +3733,21 @@ path {
 
   .section-about .section__content {
     padding-right: 0;
+  }
+
+  .section-about .section__content:before {
+    position: absolute;
+    content: '';
+    background-image: url(../assets/img/49-a.png);
+    background-repeat: no-repeat;
+    background-position: 0;
+    background-size: cover;
+    width: 171px;
+    height: 81px;
+    display: block;
+    right: -15vw;
+    bottom: -100px;
+    transform: rotate(180deg);
   }
 
   .section-about .section__header:after {
@@ -4275,6 +4292,11 @@ path {
     left: 45%;
   }
 
+  .where-buy {
+    width: 65px;
+    height: 65px;
+  }
+
   .section-banner {
     padding-top: 60px;
   }
@@ -4282,6 +4304,9 @@ path {
   .section-banner .banner {
     padding-left: 0;
     padding-right: 0;
+    width: auto;
+    margin-left: -15px;
+    margin-right: -15px;
   }
 
   .section-banner .left-part {
@@ -4309,6 +4334,19 @@ path {
 
   .section-about .section__content:before {
     right: -16%;
+    bottom: -75px;
+  }
+
+  .section-about .wrap-img .img-anim-2 {
+    width: 42%;
+    top: -7px;
+    right: -22px;
+  }
+
+  .section-about .wrap-img .img-anim-1 {
+    width: 65%;
+    bottom: -6px;
+    right: -43%;
   }
 
   .section-manifestations .section__thumb {
@@ -4615,6 +4653,11 @@ path {
 @media only screen and (max-width: 420px) {
   .wrap-sections {
     background-size: 150%;
+  }
+
+  .where-buy {
+    width: 41px;
+    height: 41px;
   }
 }
 
