@@ -3225,10 +3225,6 @@ path {
     display: none;
   }
 
-  .section-about .wrap-img .img-anim-2 {
-    right: 0;
-  }
-
   .section-manifestations {
     padding-bottom: 5%;
   }
@@ -4185,7 +4181,7 @@ path {
 
   .section-video .aside_mob .banner__content .lava-lamp {
     max-width: 218px;
-    height: 218px;
+    width: 80%;
   }
 
   .section-video .aside_mob .banner__content .text_middle {
@@ -4658,6 +4654,7 @@ path {
   .where-buy {
     width: 41px;
     height: 41px;
+    background-size: 50%;
   }
 }
 

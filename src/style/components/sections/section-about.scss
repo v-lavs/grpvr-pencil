@@ -136,9 +136,6 @@
     br {
       display: none;
     }
-    .wrap-img .img-anim-2{
-      right: 0;
-    }
   }
 
   @include respond-to($xs) {
